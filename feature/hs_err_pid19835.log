@@ -1,0 +1,1345 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  SIGSEGV (0xb) at pc=0x00007f1c43db6489, pid=19835, tid=0x00007f1bdf581700
+#
+# JRE version: Java(TM) SE Runtime Environment (8.0_121-b13) (build 1.8.0_121-b13)
+# Java VM: Java HotSpot(TM) 64-Bit Server VM (25.121-b13 mixed mode linux-amd64 compressed oops)
+# Problematic frame:
+# C  [_jpype.so+0x3c489]  JPJavaEnv::NewLocalRef(_jobject*)+0x9
+#
+# Failed to write core dump. Core dumps have been disabled. To enable core dumping, try "ulimit -c unlimited" before starting Java again
+#
+# If you would like to submit a bug report, please visit:
+#   http://bugreport.java.com/bugreport/crash.jsp
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread is native thread
+
+siginfo: si_signo: 11 (SIGSEGV), si_code: 1 (SEGV_MAPERR), si_addr: 0x0000000000000000
+
+Registers:
+RAX=0x0000000000000000, RBX=0x00000000035fc818, RCX=0x0000000000000001, RDX=0x0000000000000000
+RSP=0x00007f1bdf5314c0, RBP=0x000000000355d9a0, RSI=0x00007f1bdf5314a0, RDI=0x0000000000000002
+R8 =0x00007f1c7bb77f70, R9 =0x00007f1c48cee39c, R10=0x000000000000007c, R11=0x00007f1c48cee398
+R12=0x00000000035fc818, R13=0x00007f1bdf5314df, R14=0x00007f1bc8003ef0, R15=0x00007f1c7c0e8050
+RIP=0x00007f1c43db6489, EFLAGS=0x0000000000010206, CSGSFS=0x0000000000000033, ERR=0x0000000000000004
+  TRAPNO=0x000000000000000e
+
+Top of Stack: (sp=0x00007f1bdf5314c0)
+0x00007f1bdf5314c0:   000000000407aaf0 00007f1c43dc7591
+0x00007f1bdf5314d0:   0000000000000000 00007f1bdf531550
+0x00007f1bdf5314e0:   00007f1bd8002270 7683dced98f77200
+0x00007f1bdf5314f0:   00007f1bd8001d80 00007f1be7d9d830
+0x00007f1bdf531500:   00007f1c7bf232f0 00007f1bdf531570
+0x00007f1bdf531510:   0000000000000000 00007f1c43ddf4fa
+0x00007f1bdf531520:   00007f1be7f30dd0 0000003000000020
+0x00007f1bdf531530:   00007f1bdf531547 00007f1be7d9d830
+0x00007f1bdf531540:   0000000000000000 00007f1bd8001d80
+0x00007f1bdf531550:   00007f1bd8002250 00007f1bd8002258
+0x00007f1bdf531560:   00007f1bd8002258 00007f1c480aa118
+0x00007f1bdf531570:   00007f1c43ffaa48 00007f1bd8002230
+0x00007f1bdf531580:   00007f1bd8002238 00007f1bd8002238
+0x00007f1bdf531590:   0000000000000000 7683dced98f77200
+0x00007f1bdf5315a0:   0000000000000002 00007f1c43ddf370
+0x00007f1bdf5315b0:   00007f1be7d9d830 00007f1c7bf232f0
+0x00007f1bdf5315c0:   00000000ffffffff 00007f1beb4fc560
+0x00007f1bdf5315d0:   00007f1be7d9d830 00007f1c7bb58023
+0x00007f1bdf5315e0:   0000000000000000 00007f1c7bedb480
+0x00007f1bdf5315f0:   0000000000000000 00007f1c480aa11d
+0x00007f1bdf531600:   00007f1c7c11f1b0 00007f1c7bc0dfc6
+0x00007f1bdf531610:   0000000000000000 00007f1c7bc28991
+0x00007f1bdf531620:   0000000000000200 00007f1bdf531690
+0x00007f1bdf531630:   0000000005913c00 00007f1c480aa114
+0x00007f1bdf531640:   00007f1c7bf22de0 00007f1b00000000
+0x00007f1bdf531650:   00007f1c7bee00a0 00007f1c7c0e8050
+0x00007f1bdf531660:   0000000000000000 00000001df531750
+0x00007f1bdf531670:   00007f1c480a66d0 00007f1c480a9530
+0x00007f1bdf531680:   00007f1c480a6690 00007f1beb4fc6d8
+0x00007f1bdf531690:   00007f1beb4fc6d8 00007f1bdf531760
+0x00007f1bdf5316a0:   ffffffff00000000 00007f1bdf531750
+0x00007f1bdf5316b0:   00007f1beb4fc6e0 00007f1bdf531700 
+
+Instructions: (pc=0x00007f1c43db6489)
+0x00007f1c43db6469:   8b 92 b0 00 00 00 ff e2 0f 1f 80 00 00 00 00 5b
+0x00007f1c43db6479:   c3 66 0f 1f 44 00 00 53 48 89 f3 e8 e7 55 fe ff
+0x00007f1c43db6489:   48 8b 10 48 89 de 48 89 c7 5b 48 8b 92 c8 00 00
+0x00007f1c43db6499:   00 ff e2 0f 1f 40 00 53 48 89 f3 e8 c7 55 fe ff 
+
+Register to memory mapping:
+
+RAX=0x0000000000000000 is an unknown value
+RBX=0x00000000035fc818 is a global jni handle
+RCX=0x0000000000000001 is an unknown value
+RDX=0x0000000000000000 is an unknown value
+RSP=0x00007f1bdf5314c0 is an unknown value
+RBP=0x000000000355d9a0 is an unknown value
+RSI=0x00007f1bdf5314a0 is an unknown value
+RDI=0x0000000000000002 is an unknown value
+R8 =0x00007f1c7bb77f70: <offset 0x73f70> in /home/llq/anaconda2/bin/../lib/libpython2.7.so.1.0 at 0x00007f1c7bb04000
+R9 =0x00007f1c48cee39c is an unknown value
+R10=0x000000000000007c is an unknown value
+R11=0x00007f1c48cee398 is an unknown value
+R12=0x00000000035fc818 is a global jni handle
+R13=0x00007f1bdf5314df is an unknown value
+R14=0x00007f1bc8003ef0 is an unknown value
+R15=0x00007f1c7c0e8050 is an unknown value
+
+
+Stack: [0x00007f1bdeb81000,0x00007f1bdf582000],  sp=0x00007f1bdf5314c0,  free space=9921k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+C  [_jpype.so+0x3c489]  JPJavaEnv::NewLocalRef(_jobject*)+0x9
+
+
+---------------  P R O C E S S  ---------------
+
+VM state:not at safepoint (normal execution)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+Heap:
+ PSYoungGen      total 565248K, used 500456K [0x00000000d5580000, 0x0000000100000000, 0x0000000100000000)
+  eden space 521728K, 87% used [0x00000000d5580000,0x00000000f13bfc58,0x00000000f5300000)
+  from space 43520K, 99% used [0x00000000fd580000,0x00000000ffffa3c8,0x0000000100000000)
+  to   space 88576K, 0% used [0x00000000f5300000,0x00000000f5300000,0x00000000fa980000)
+ ParOldGen       total 878080K, used 360693K [0x0000000080000000, 0x00000000b5980000, 0x00000000d5580000)
+  object space 878080K, 41% used [0x0000000080000000,0x000000009603d620,0x00000000b5980000)
+ Metaspace       used 5477K, capacity 5636K, committed 5888K, reserved 1056768K
+  class space    used 603K, capacity 666K, committed 768K, reserved 1048576K
+
+Card table byte_map: [0x00007f1c32732000,0x00007f1c32b33000] byte_map_base: 0x00007f1c32332000
+
+Marking Bits: (ParMarkBitMap*) 0x00007f1c43d4cc80
+ Begin Bits: [0x00007f1c2e083000, 0x00007f1c30083000)
+ End Bits:   [0x00007f1c30083000, 0x00007f1c32083000)
+
+Polling page: 0x00007f1c7c144000
+
+CodeCache: size=245760Kb used=3023Kb max_used=3035Kb free=242736Kb
+ bounds [0x00007f1c32ef3000, 0x00007f1c331f3000, 0x00007f1c41ef3000]
+ total_blobs=939 nmethods=669 adapters=184
+ compilation: enabled
+
+Compilation events (10 events):
+Event: 170.319 Thread 0x000000000354e000  665       3       com.hankcs.hanlp.corpus.dictionary.item.EnumItem::containsLabel (11 bytes)
+Event: 170.320 Thread 0x000000000354e000 nmethod 665 0x00007f1c331c4b10 code [0x00007f1c331c4c80, 0x00007f1c331c4ea8]
+Event: 171.717 Thread 0x0000000003549800  666       4       java.lang.AbstractStringBuilder::setLength (45 bytes)
+Event: 171.720 Thread 0x0000000003549800 nmethod 666 0x00007f1c331e67d0 code [0x00007f1c331e6940, 0x00007f1c331e6c78]
+Event: 176.243 Thread 0x000000000354c800  667       4       java.util.LinkedList::toArray (39 bytes)
+Event: 176.245 Thread 0x000000000354c800 nmethod 667 0x00007f1c331e6410 code [0x00007f1c331e6560, 0x00007f1c331e66f8]
+Event: 178.554 Thread 0x0000000003549800  668       4       java.util.Arrays::copyOf (46 bytes)
+Event: 178.557 Thread 0x0000000003549800 nmethod 668 0x00007f1c331e8190 code [0x00007f1c331e8300, 0x00007f1c331e8698]
+Event: 189.512 Thread 0x000000000354c800  669       4       com.hankcs.hanlp.dictionary.CoreDictionary::get (11 bytes)
+Event: 189.516 Thread 0x000000000354c800 nmethod 669 0x00007f1c331e7590 code [0x00007f1c331e7720, 0x00007f1c331e7b78]
+
+GC Heap History (10 events):
+Event: 0.662 GC heap before
+{Heap before GC invocations=3 (full 1):
+ PSYoungGen      total 567808K, used 1600K [0x00000000d5580000, 0x00000000faa80000, 0x0000000100000000)
+  eden space 524288K, 0% used [0x00000000d5580000,0x00000000d5580000,0x00000000f5580000)
+  from space 43520K, 3% used [0x00000000f8000000,0x00000000f8190030,0x00000000faa80000)
+  to   space 43520K, 0% used [0x00000000f5580000,0x00000000f5580000,0x00000000f8000000)
+ ParOldGen       total 699392K, used 469965K [0x0000000080000000, 0x00000000aab00000, 0x00000000d5580000)
+  object space 699392K, 67% used [0x0000000080000000,0x000000009caf3540,0x00000000aab00000)
+ Metaspace       used 3985K, capacity 4992K, committed 5120K, reserved 1056768K
+  class space    used 444K, capacity 496K, committed 512K, reserved 1048576K
+Event: 0.697 GC heap after
+Heap after GC invocations=3 (full 1):
+ PSYoungGen      total 567808K, used 0K [0x00000000d5580000, 0x00000000faa80000, 0x0000000100000000)
+  eden space 524288K, 0% used [0x00000000d5580000,0x00000000d5580000,0x00000000f5580000)
+  from space 43520K, 0% used [0x00000000f8000000,0x00000000f8000000,0x00000000faa80000)
+  to   space 43520K, 0% used [0x00000000f5580000,0x00000000f5580000,0x00000000f8000000)
+ ParOldGen       total 878080K, used 273071K [0x0000000080000000, 0x00000000b5980000, 0x00000000d5580000)
+  object space 878080K, 31% used [0x0000000080000000,0x0000000090aabf50,0x00000000b5980000)
+ Metaspace       used 3985K, capacity 4992K, committed 5120K, reserved 1056768K
+  class space    used 444K, capacity 496K, committed 512K, reserved 1048576K
+}
+Event: 49.414 GC heap before
+{Heap before GC invocations=4 (full 1):
+ PSYoungGen      total 567808K, used 524288K [0x00000000d5580000, 0x00000000faa80000, 0x0000000100000000)
+  eden space 524288K, 100% used [0x00000000d5580000,0x00000000f5580000,0x00000000f5580000)
+  from space 43520K, 0% used [0x00000000f8000000,0x00000000f8000000,0x00000000faa80000)
+  to   space 43520K, 0% used [0x00000000f5580000,0x00000000f5580000,0x00000000f8000000)
+ ParOldGen       total 878080K, used 273071K [0x0000000080000000, 0x00000000b5980000, 0x00000000d5580000)
+  object space 878080K, 31% used [0x0000000080000000,0x0000000090aabf50,0x00000000b5980000)
+ Metaspace       used 5472K, capacity 5636K, committed 5888K, reserved 1056768K
+  class space    used 603K, capacity 666K, committed 768K, reserved 1048576K
+Event: 49.446 GC heap after
+Heap after GC invocations=4 (full 1):
+ PSYoungGen      total 567808K, used 43496K [0x00000000d5580000, 0x0000000100000000, 0x0000000100000000)
+  eden space 524288K, 0% used [0x00000000d5580000,0x00000000d5580000,0x00000000f5580000)
+  from space 43520K, 99% used [0x00000000f5580000,0x00000000f7ffa3c8,0x00000000f8000000)
+  to   space 43520K, 0% used [0x00000000fd580000,0x00000000fd580000,0x0000000100000000)
+ ParOldGen       total 878080K, used 360541K [0x0000000080000000, 0x00000000b5980000, 0x00000000d5580000)
+  object space 878080K, 41% used [0x0000000080000000,0x0000000096017620,0x00000000b5980000)
+ Metaspace       used 5472K, capacity 5636K, committed 5888K, reserved 1056768K
+  class space    used 603K, capacity 666K, committed 768K, reserved 1048576K
+}
+Event: 85.177 GC heap before
+{Heap before GC invocations=5 (full 1):
+ PSYoungGen      total 567808K, used 567784K [0x00000000d5580000, 0x0000000100000000, 0x0000000100000000)
+  eden space 524288K, 100% used [0x00000000d5580000,0x00000000f5580000,0x00000000f5580000)
+  from space 43520K, 99% used [0x00000000f5580000,0x00000000f7ffa3c8,0x00000000f8000000)
+  to   space 43520K, 0% used [0x00000000fd580000,0x00000000fd580000,0x0000000100000000)
+ ParOldGen       total 878080K, used 360541K [0x0000000080000000, 0x00000000b5980000, 0x00000000d5580000)
+  object space 878080K, 41% used [0x0000000080000000,0x0000000096017620,0x00000000b5980000)
+ Metaspace       used 5476K, capacity 5636K, committed 5888K, reserved 1056768K
+  class space    used 603K, capacity 666K, committed 768K, reserved 1048576K
+Event: 85.191 GC heap after
+Heap after GC invocations=5 (full 1):
+ PSYoungGen      total 655360K, used 43496K [0x00000000d5580000, 0x0000000100000000, 0x0000000100000000)
+  eden space 611840K, 0% used [0x00000000d5580000,0x00000000d5580000,0x00000000fab00000)
+  from space 43520K, 99% used [0x00000000fd580000,0x00000000ffffa3c8,0x0000000100000000)
+  to   space 43520K, 0% used [0x00000000fab00000,0x00000000fab00000,0x00000000fd580000)
+ ParOldGen       total 878080K, used 360605K [0x0000000080000000, 0x00000000b5980000, 0x00000000d5580000)
+  object space 878080K, 41% used [0x0000000080000000,0x0000000096027620,0x00000000b5980000)
+ Metaspace       used 5476K, capacity 5636K, committed 5888K, reserved 1056768K
+  class space    used 603K, capacity 666K, committed 768K, reserved 1048576K
+}
+Event: 125.839 GC heap before
+{Heap before GC invocations=6 (full 1):
+ PSYoungGen      total 655360K, used 655336K [0x00000000d5580000, 0x0000000100000000, 0x0000000100000000)
+  eden space 611840K, 100% used [0x00000000d5580000,0x00000000fab00000,0x00000000fab00000)
+  from space 43520K, 99% used [0x00000000fd580000,0x00000000ffffa3c8,0x0000000100000000)
+  to   space 43520K, 0% used [0x00000000fab00000,0x00000000fab00000,0x00000000fd580000)
+ ParOldGen       total 878080K, used 360605K [0x0000000080000000, 0x00000000b5980000, 0x00000000d5580000)
+  object space 878080K, 41% used [0x0000000080000000,0x0000000096027620,0x00000000b5980000)
+ Metaspace       used 5476K, capacity 5636K, committed 5888K, reserved 1056768K
+  class space    used 603K, capacity 666K, committed 768K, reserved 1048576K
+Event: 125.850 GC heap after
+Heap after GC invocations=6 (full 1):
+ PSYoungGen      total 655360K, used 43496K [0x00000000d5580000, 0x0000000100000000, 0x0000000100000000)
+  eden space 611840K, 0% used [0x00000000d5580000,0x00000000d5580000,0x00000000fab00000)
+  from space 43520K, 99% used [0x00000000fab00000,0x00000000fd57a3c8,0x00000000fd580000)
+  to   space 43520K, 0% used [0x00000000fd580000,0x00000000fd580000,0x0000000100000000)
+ ParOldGen       total 878080K, used 360637K [0x0000000080000000, 0x00000000b5980000, 0x00000000d5580000)
+  object space 878080K, 41% used [0x0000000080000000,0x000000009602f620,0x00000000b5980000)
+ Metaspace       used 5476K, capacity 5636K, committed 5888K, reserved 1056768K
+  class space    used 603K, capacity 666K, committed 768K, reserved 1048576K
+}
+Event: 166.329 GC heap before
+{Heap before GC invocations=7 (full 1):
+ PSYoungGen      total 655360K, used 655336K [0x00000000d5580000, 0x0000000100000000, 0x0000000100000000)
+  eden space 611840K, 100% used [0x00000000d5580000,0x00000000fab00000,0x00000000fab00000)
+  from space 43520K, 99% used [0x00000000fab00000,0x00000000fd57a3c8,0x00000000fd580000)
+  to   space 43520K, 0% used [0x00000000fd580000,0x00000000fd580000,0x0000000100000000)
+ ParOldGen       total 878080K, used 360637K [0x0000000080000000, 0x00000000b5980000, 0x00000000d5580000)
+  object space 878080K, 41% used [0x0000000080000000,0x000000009602f620,0x00000000b5980000)
+ Metaspace       used 5477K, capacity 5636K, committed 5888K, reserved 1056768K
+  class space    used 603K, capacity 666K, committed 768K, reserved 1048576K
+Event: 166.338 GC heap after
+Heap after GC invocations=7 (full 1):
+ PSYoungGen      total 565248K, used 43496K [0x00000000d5580000, 0x0000000100000000, 0x0000000100000000)
+  eden space 521728K, 0% used [0x00000000d5580000,0x00000000d5580000,0x00000000f5300000)
+  from space 43520K, 99% used [0x00000000fd580000,0x00000000ffffa3c8,0x0000000100000000)
+  to   space 88576K, 0% used [0x00000000f5300000,0x00000000f5300000,0x00000000fa980000)
+ ParOldGen       total 878080K, used 360693K [0x0000000080000000, 0x00000000b5980000, 0x00000000d5580000)
+  object space 878080K, 41% used [0x0000000080000000,0x000000009603d620,0x00000000b5980000)
+ Metaspace       used 5477K, capacity 5636K, committed 5888K, reserved 1056768K
+  class space    used 603K, capacity 666K, committed 768K, reserved 1048576K
+}
+
+Deoptimization events (10 events):
+Event: 31.490 Thread 0x00000000023d0000 Uncommon trap: reason=unstable_if action=reinterpret pc=0x00007f1c330d6da4 method=java.util.TreeMap.fixAfterInsertion(Ljava/util/TreeMap$Entry;)V @ 41
+Event: 31.915 Thread 0x00000000023d0000 Uncommon trap: reason=unstable_if action=reinterpret pc=0x00007f1c331553e0 method=com.hankcs.hanlp.seg.common.Vertex.compileRealWord(Ljava/lang/String;Lcom/hankcs/hanlp/dictionary/CoreDictionary$Attribute;)Ljava/lang/String; @ 99
+Event: 32.084 Thread 0x00000000023d0000 Uncommon trap: reason=predicate action=maybe_recompile pc=0x00007f1c3315c8ac method=java.util.LinkedList.toArray([Ljava/lang/Object;)[Ljava/lang/Object; @ 45
+Event: 32.101 Thread 0x00000000023d0000 Uncommon trap: reason=array_check action=maybe_recompile pc=0x00007f1c33168afc method=java.util.LinkedList.toArray([Ljava/lang/Object;)[Ljava/lang/Object; @ 55
+Event: 32.101 Thread 0x00000000023d0000 Uncommon trap: reason=array_check action=maybe_recompile pc=0x00007f1c33168afc method=java.util.LinkedList.toArray([Ljava/lang/Object;)[Ljava/lang/Object; @ 55
+Event: 32.101 Thread 0x00000000023d0000 Uncommon trap: reason=array_check action=maybe_recompile pc=0x00007f1c33168afc method=java.util.LinkedList.toArray([Ljava/lang/Object;)[Ljava/lang/Object; @ 55
+Event: 32.101 Thread 0x00000000023d0000 Uncommon trap: reason=array_check action=maybe_recompile pc=0x00007f1c33168afc method=java.util.LinkedList.toArray([Ljava/lang/Object;)[Ljava/lang/Object; @ 55
+Event: 32.218 Thread 0x00000000023d0000 Uncommon trap: reason=unstable_if action=reinterpret pc=0x00007f1c33177a40 method=com.hankcs.hanlp.seg.common.Vertex.compileRealWord(Ljava/lang/String;Lcom/hankcs/hanlp/dictionary/CoreDictionary$Attribute;)Ljava/lang/String; @ 118
+Event: 34.899 Thread 0x00000000023d0000 Uncommon trap: reason=unstable_if action=reinterpret pc=0x00007f1c33194d74 method=com.hankcs.hanlp.seg.common.Vertex.<init>(Ljava/lang/String;Ljava/lang/String;Lcom/hankcs/hanlp/dictionary/CoreDictionary$Attribute;I)V @ 5
+Event: 39.238 Thread 0x00000000023d0000 Uncommon trap: reason=unstable_if action=reinterpret pc=0x00007f1c331bb454 method=com.hankcs.hanlp.dictionary.nr.PersonDictionary$1.hit(IILcom/hankcs/hanlp/dictionary/nr/NRPattern;)V @ 84
+
+Internal exceptions (9 events):
+Event: 0.019 Thread 0x00000000023d0000 Exception <a 'java/lang/NoSuchMethodError': Method sun.misc.Unsafe.defineClass(Ljava/lang/String;[BII)Ljava/lang/Class; name or signature does not match> (0x00000000d5587ca8) thrown at [/HUDSON3/workspace/8-2-build-linux-amd64/jdk8u121/8372/hotspot/src/sh
+Event: 0.019 Thread 0x00000000023d0000 Exception <a 'java/lang/NoSuchMethodError': Method sun.misc.Unsafe.prefetchRead(Ljava/lang/Object;J)V name or signature does not match> (0x00000000d5587f90) thrown at [/HUDSON3/workspace/8-2-build-linux-amd64/jdk8u121/8372/hotspot/src/share/vm/prims/jni.c
+Event: 0.109 Thread 0x00000000023d0000 Exception <a 'java/security/PrivilegedActionException'> (0x00000000d56afe48) thrown at [/HUDSON3/workspace/8-2-build-linux-amd64/jdk8u121/8372/hotspot/src/share/vm/prims/jvm.cpp, line 1390]
+Event: 0.109 Thread 0x00000000023d0000 Exception <a 'java/security/PrivilegedActionException'> (0x00000000d56b0058) thrown at [/HUDSON3/workspace/8-2-build-linux-amd64/jdk8u121/8372/hotspot/src/share/vm/prims/jvm.cpp, line 1390]
+Event: 0.109 Thread 0x00000000023d0000 Exception <a 'java/security/PrivilegedActionException'> (0x00000000d56b28e8) thrown at [/HUDSON3/workspace/8-2-build-linux-amd64/jdk8u121/8372/hotspot/src/share/vm/prims/jvm.cpp, line 1390]
+Event: 0.109 Thread 0x00000000023d0000 Exception <a 'java/security/PrivilegedActionException'> (0x00000000d56b2af8) thrown at [/HUDSON3/workspace/8-2-build-linux-amd64/jdk8u121/8372/hotspot/src/share/vm/prims/jvm.cpp, line 1390]
+Event: 31.402 Thread 0x00000000023d0000 Exception <a 'java/lang/NoSuchFieldError': method resolution failed> (0x00000000e027bb90) thrown at [/HUDSON3/workspace/8-2-build-linux-amd64/jdk8u121/8372/hotspot/src/share/vm/prims/methodHandles.cpp, line 1146]
+Event: 31.404 Thread 0x00000000023d0000 Exception <a 'java/lang/NoSuchFieldError': method resolution failed> (0x00000000e02890c8) thrown at [/HUDSON3/workspace/8-2-build-linux-amd64/jdk8u121/8372/hotspot/src/share/vm/prims/methodHandles.cpp, line 1146]
+Event: 34.899 Thread 0x00000000023d0000 Implicit null exception at 0x00007f1c3318f4b4 to 0x00007f1c33194cd1
+
+Events (10 events):
+Event: 49.447 Executing VM operation: RevokeBias done
+Event: 49.447 Executing VM operation: RevokeBias
+Event: 49.447 Executing VM operation: RevokeBias done
+Event: 85.177 Executing VM operation: ParallelGCFailedAllocation
+Event: 85.191 Executing VM operation: ParallelGCFailedAllocation done
+Event: 125.839 Executing VM operation: ParallelGCFailedAllocation
+Event: 125.850 Executing VM operation: ParallelGCFailedAllocation done
+Event: 166.329 Executing VM operation: ParallelGCFailedAllocation
+Event: 166.338 Executing VM operation: ParallelGCFailedAllocation done
+Event: 196.646 Thread 0x00007f1bc8002800 Thread added: 0x00007f1bc8002800
+
+
+Dynamic libraries:
+00400000-00401000 r-xp 00000000 08:12 27274330                           /home/llq/anaconda2/bin/python2.7
+00600000-00601000 rw-p 00000000 08:12 27274330                           /home/llq/anaconda2/bin/python2.7
+00c4f000-05935000 rw-p 00000000 00:00 0                                  [heap]
+80000000-b5980000 rw-p 00000000 00:00 0 
+b5980000-d5580000 ---p 00000000 00:00 0 
+d5580000-100000000 rw-p 00000000 00:00 0 
+100000000-1000c0000 rw-p 00000000 00:00 0 
+1000c0000-140000000 ---p 00000000 00:00 0 
+7f1bc8000000-7f1bc8030000 rw-p 00000000 00:00 0 
+7f1bc8030000-7f1bcc000000 ---p 00000000 00:00 0 
+7f1bd0000000-7f1bd0021000 rw-p 00000000 00:00 0 
+7f1bd0021000-7f1bd4000000 ---p 00000000 00:00 0 
+7f1bd4000000-7f1bd4021000 rw-p 00000000 00:00 0 
+7f1bd4021000-7f1bd8000000 ---p 00000000 00:00 0 
+7f1bd8000000-7f1bd8021000 rw-p 00000000 00:00 0 
+7f1bd8021000-7f1bdc000000 ---p 00000000 00:00 0 
+7f1bdcd7e000-7f1bdcd81000 ---p 00000000 00:00 0 
+7f1bdcd81000-7f1bdd77f000 rw-p 00000000 00:00 0 
+7f1bdd77f000-7f1bdd780000 ---p 00000000 00:00 0 
+7f1bdd780000-7f1bde180000 rw-p 00000000 00:00 0 
+7f1bde180000-7f1bde181000 ---p 00000000 00:00 0 
+7f1bde181000-7f1bdeb81000 rw-p 00000000 00:00 0 
+7f1bdeb81000-7f1bdeb82000 ---p 00000000 00:00 0 
+7f1bdeb82000-7f1be6796000 rw-p 00000000 00:00 0 
+7f1be67d6000-7f1be6816000 rw-p 00000000 00:00 0 
+7f1be6896000-7f1be68d6000 rw-p 00000000 00:00 0 
+7f1be6996000-7f1be69d6000 rw-p 00000000 00:00 0 
+7f1be6ad6000-7f1be6b16000 rw-p 00000000 00:00 0 
+7f1be6c96000-7f1be6cd6000 rw-p 00000000 00:00 0 
+7f1be6e96000-7f1be6ed6000 rw-p 00000000 00:00 0 
+7f1be7196000-7f1be7f96000 rw-p 00000000 00:00 0 
+7f1be7f96000-7f1be7faf000 r-xp 00000000 08:12 33822214                   /home/llq/anaconda2/lib/python2.7/site-packages/gensim/models/doc2vec_inner.so
+7f1be7faf000-7f1be81af000 ---p 00019000 08:12 33822214                   /home/llq/anaconda2/lib/python2.7/site-packages/gensim/models/doc2vec_inner.so
+7f1be81af000-7f1be81b1000 rw-p 00019000 08:12 33822214                   /home/llq/anaconda2/lib/python2.7/site-packages/gensim/models/doc2vec_inner.so
+7f1be81b1000-7f1be81f1000 rw-p 00000000 00:00 0 
+7f1be81f1000-7f1beb0a0000 r-xp 00000000 08:12 29496536                   /home/llq/anaconda2/lib/libmkl_avx2.so
+7f1beb0a0000-7f1beb2a0000 ---p 02eaf000 08:12 29496536                   /home/llq/anaconda2/lib/libmkl_avx2.so
+7f1beb2a0000-7f1beb2a7000 r--p 02eaf000 08:12 29496536                   /home/llq/anaconda2/lib/libmkl_avx2.so
+7f1beb2a7000-7f1beb2b1000 rw-p 02eb6000 08:12 29496536                   /home/llq/anaconda2/lib/libmkl_avx2.so
+7f1beb2b1000-7f1beb2bb000 rw-p 00000000 00:00 0 
+7f1beb2bb000-7f1beb2d1000 r-xp 00000000 08:12 33822251                   /home/llq/anaconda2/lib/python2.7/site-packages/gensim/models/word2vec_inner.so
+7f1beb2d1000-7f1beb4d1000 ---p 00016000 08:12 33822251                   /home/llq/anaconda2/lib/python2.7/site-packages/gensim/models/word2vec_inner.so
+7f1beb4d1000-7f1beb4d3000 rw-p 00016000 08:12 33822251                   /home/llq/anaconda2/lib/python2.7/site-packages/gensim/models/word2vec_inner.so
+7f1beb4d3000-7f1beb555000 rw-p 00000000 00:00 0 
+7f1beb555000-7f1beb566000 r-xp 00000000 08:12 33820283                   /home/llq/anaconda2/lib/python2.7/site-packages/scipy/stats/mvn.so
+7f1beb566000-7f1beb766000 ---p 00011000 08:12 33820283                   /home/llq/anaconda2/lib/python2.7/site-packages/scipy/stats/mvn.so
+7f1beb766000-7f1beb768000 rw-p 00011000 08:12 33820283                   /home/llq/anaconda2/lib/python2.7/site-packages/scipy/stats/mvn.so
+7f1beb768000-7f1beb89f000 rw-p 00000000 00:00 0 
+7f1beb89f000-7f1beb8aa000 r-xp 00000000 08:12 33820286                   /home/llq/anaconda2/lib/python2.7/site-packages/scipy/stats/statlib.so
+7f1beb8aa000-7f1bebaa9000 ---p 0000b000 08:12 33820286                   /home/llq/anaconda2/lib/python2.7/site-packages/scipy/stats/statlib.so
+7f1bebaa9000-7f1bebaab000 rw-p 0000a000 08:12 33820286                   /home/llq/anaconda2/lib/python2.7/site-packages/scipy/stats/statlib.so
+7f1bebaab000-7f1bebbeb000 rw-p 00000000 00:00 0 
+7f1bebbeb000-7f1bebc50000 r-xp 00000000 08:12 33820264                   /home/llq/anaconda2/lib/python2.7/site-packages/scipy/stats/_stats.so
+7f1bebc50000-7f1bebe4f000 ---p 00065000 08:12 33820264                   /home/llq/anaconda2/lib/python2.7/site-packages/scipy/stats/_stats.so
+7f1bebe4f000-7f1bebe54000 rw-p 00064000 08:12 33820264                   /home/llq/anaconda2/lib/python2.7/site-packages/scipy/stats/_stats.so
+7f1bebe54000-7f1bebed5000 rw-p 00000000 00:00 0 
+7f1bebed5000-7f1bebefd000 r-xp 00000000 08:12 33820073                   /home/llq/anaconda2/lib/python2.7/site-packages/scipy/spatial/_hausdorff.so
+7f1bebefd000-7f1bec0fc000 ---p 00028000 08:12 33820073                   /home/llq/anaconda2/lib/python2.7/site-packages/scipy/spatial/_hausdorff.so
+7f1bec0fc000-7f1bec0ff000 rw-p 00027000 08:12 33820073                   /home/llq/anaconda2/lib/python2.7/site-packages/scipy/spatial/_hausdorff.so
+7f1bec0ff000-7f1bec114000 r-xp 00000000 08:12 33820072                   /home/llq/anaconda2/lib/python2.7/site-packages/scipy/spatial/_distance_wrap.so
+7f1bec114000-7f1bec313000 ---p 00015000 08:12 33820072                   /home/llq/anaconda2/lib/python2.7/site-packages/scipy/spatial/_distance_wrap.so
+7f1bec313000-7f1bec314000 rw-p 00014000 08:12 33820072                   /home/llq/anaconda2/lib/python2.7/site-packages/scipy/spatial/_distance_wrap.so
+7f1bec314000-7f1bec354000 rw-p 00000000 00:00 0 
+7f1bec354000-7f1bec37b000 r-xp 00000000 08:12 33820080                   /home/llq/anaconda2/lib/python2.7/site-packages/scipy/spatial/_voronoi.so
+7f1bec37b000-7f1bec57b000 ---p 00027000 08:12 33820080                   /home/llq/anaconda2/lib/python2.7/site-packages/scipy/spatial/_voronoi.so
+7f1bec57b000-7f1bec57e000 rw-p 00027000 08:12 33820080                   /home/llq/anaconda2/lib/python2.7/site-packages/scipy/spatial/_voronoi.so
+7f1bec57e000-7f1bec665000 r-xp 00000000 08:12 33820086                   /home/llq/anaconda2/lib/python2.7/site-packages/scipy/spatial/qhull.so
+7f1bec665000-7f1bec864000 ---p 000e7000 08:12 33820086                   /home/llq/anaconda2/lib/python2.7/site-packages/scipy/spatial/qhull.so
+7f1bec864000-7f1bec86e000 rw-p 000e6000 08:12 33820086                   /home/llq/anaconda2/lib/python2.7/site-packages/scipy/spatial/qhull.so
+7f1bec86e000-7f1bec86f000 rw-p 00000000 00:00 0 
+7f1bec86f000-7f1bec902000 r-xp 00000000 08:12 33820081                   /home/llq/anaconda2/lib/python2.7/site-packages/scipy/spatial/ckdtree.so
+7f1bec902000-7f1becb01000 ---p 00093000 08:12 33820081                   /home/llq/anaconda2/lib/python2.7/site-packages/scipy/spatial/ckdtree.so
+7f1becb01000-7f1becb09000 rw-p 00092000 08:12 33820081                   /home/llq/anaconda2/lib/python2.7/site-packages/scipy/spatial/ckdtree.so
+7f1becb09000-7f1becb57000 r-xp 00000000 08:12 33819133                   /home/llq/anaconda2/lib/python2.7/site-packages/scipy/interpolate/interpnd.so
+7f1becb57000-7f1becd56000 ---p 0004e000 08:12 33819133                   /home/llq/anaconda2/lib/python2.7/site-packages/scipy/interpolate/interpnd.so
+7f1becd56000-7f1becd5b000 rw-p 0004d000 08:12 33819133                   /home/llq/anaconda2/lib/python2.7/site-packages/scipy/interpolate/interpnd.so
+7f1becd5b000-7f1becdab000 r-xp 00000000 08:12 33819127                   /home/llq/anaconda2/lib/python2.7/site-packages/scipy/interpolate/_ppoly.so
+7f1becdab000-7f1becfab000 ---p 00050000 08:12 33819127                   /home/llq/anaconda2/lib/python2.7/site-packages/scipy/interpolate/_ppoly.so
+7f1becfab000-7f1becfb1000 rw-p 00050000 08:12 33819127                   /home/llq/anaconda2/lib/python2.7/site-packages/scipy/interpolate/_ppoly.so
+7f1becfb1000-7f1becff1000 rw-p 00000000 00:00 0 
+7f1becff1000-7f1bed02d000 r-xp 00000000 08:12 33819116                   /home/llq/anaconda2/lib/python2.7/site-packages/scipy/interpolate/_bspl.so
+7f1bed02d000-7f1bed22c000 ---p 0003c000 08:12 33819116                   /home/llq/anaconda2/lib/python2.7/site-packages/scipy/interpolate/_bspl.so
+7f1bed22c000-7f1bed232000 rw-p 0003b000 08:12 33819116                   /home/llq/anaconda2/lib/python2.7/site-packages/scipy/interpolate/_bspl.so
+7f1bed232000-7f1bed2a2000 r-xp 00000000 08:12 33819128                   /home/llq/anaconda2/lib/python2.7/site-packages/scipy/interpolate/dfitpack.so
+7f1bed2a2000-7f1bed4a2000 ---p 00070000 08:12 33819128                   /home/llq/anaconda2/lib/python2.7/site-packages/scipy/interpolate/dfitpack.so
+7f1bed4a2000-7f1bed4a9000 rw-p 00070000 08:12 33819128                   /home/llq/anaconda2/lib/python2.7/site-packages/scipy/interpolate/dfitpack.so
+7f1bed4a9000-7f1bed4e7000 r-xp 00000000 08:12 33819121                   /home/llq/anaconda2/lib/python2.7/site-packages/scipy/interpolate/_fitpack.so
+7f1bed4e7000-7f1bed6e7000 ---p 0003e000 08:12 33819121                   /home/llq/anaconda2/lib/python2.7/site-packages/scipy/interpolate/_fitpack.so
+7f1bed6e7000-7f1bed6e8000 rw-p 0003e000 08:12 33819121                   /home/llq/anaconda2/lib/python2.7/site-packages/scipy/interpolate/_fitpack.so
+7f1bed6e8000-7f1bed6f2000 r-xp 00000000 08:12 33819716                   /home/llq/anaconda2/lib/python2.7/site-packages/scipy/optimize/_nnls.so
+7f1bed6f2000-7f1bed8f2000 ---p 0000a000 08:12 33819716                   /home/llq/anaconda2/lib/python2.7/site-packages/scipy/optimize/_nnls.so
+7f1bed8f2000-7f1bed8f3000 rw-p 0000a000 08:12 33819716                   /home/llq/anaconda2/lib/python2.7/site-packages/scipy/optimize/_nnls.so
+7f1bed8f3000-7f1bed8f6000 r-xp 00000000 08:12 33819732                   /home/llq/anaconda2/lib/python2.7/site-packages/scipy/optimize/_zeros.so
+7f1bed8f6000-7f1bedaf5000 ---p 00003000 08:12 33819732                   /home/llq/anaconda2/lib/python2.7/site-packages/scipy/optimize/_zeros.so
+7f1bedaf5000-7f1bedaf6000 rw-p 00002000 08:12 33819732                   /home/llq/anaconda2/lib/python2.7/site-packages/scipy/optimize/_zeros.so
+7f1bedaf6000-7f1bedb18000 r-xp 00000000 08:12 33819702                   /home/llq/anaconda2/lib/python2.7/site-packages/scipy/optimize/_lsq/givens_elimination.so
+7f1bedb18000-7f1bedd17000 ---p 00022000 08:12 33819702                   /home/llq/anaconda2/lib/python2.7/site-packages/scipy/optimize/_lsq/givens_elimination.so
+7f1bedd17000-7f1bedd1a000 rw-p 00021000 08:12 33819702                   /home/llq/anaconda2/lib/python2.7/site-packages/scipy/optimize/_lsq/givens_elimination.so
+7f1bedd1a000-7f1bedd43000 r-xp 00000000 08:12 33819687                   /home/llq/anaconda2/lib/python2.7/site-packages/scipy/optimize/_group_columns.so
+7f1bedd43000-7f1bedf43000 ---p 00029000 08:12 33819687                   /home/llq/anaconda2/lib/python2.7/site-packages/scipy/optimize/_group_columns.so
+7f1bedf43000-7f1bedf46000 rw-p 00029000 08:12 33819687                   /home/llq/anaconda2/lib/python2.7/site-packages/scipy/optimize/_group_columns.so
+7f1bedf46000-7f1bedf6d000 r-xp 00000000 08:12 33819715                   /home/llq/anaconda2/lib/python2.7/site-packages/scipy/optimize/_minpack.so
+7f1bedf6d000-7f1bee16d000 ---p 00027000 08:12 33819715                   /home/llq/anaconda2/lib/python2.7/site-packages/scipy/optimize/_minpack.so
+7f1bee16d000-7f1bee16e000 rw-p 00027000 08:12 33819715                   /home/llq/anaconda2/lib/python2.7/site-packages/scipy/optimize/_minpack.so
+7f1bee16e000-7f1bee186000 r-xp 00000000 08:12 33819721                   /home/llq/anaconda2/lib/python2.7/site-packages/scipy/optimize/_slsqp.so
+7f1bee186000-7f1bee386000 ---p 00018000 08:12 33819721                   /home/llq/anaconda2/lib/python2.7/site-packages/scipy/optimize/_slsqp.so
+7f1bee386000-7f1bee387000 rw-p 00018000 08:12 33819721                   /home/llq/anaconda2/lib/python2.7/site-packages/scipy/optimize/_slsqp.so
+7f1bee387000-7f1bee3a4000 r-xp 00000000 08:12 33819684                   /home/llq/anaconda2/lib/python2.7/site-packages/scipy/optimize/_cobyla.so
+7f1bee3a4000-7f1bee5a4000 ---p 0001d000 08:12 33819684                   /home/llq/anaconda2/lib/python2.7/site-packages/scipy/optimize/_cobyla.so
+7f1bee5a4000-7f1bee5a5000 rw-p 0001d000 08:12 33819684                   /home/llq/anaconda2/lib/python2.7/site-packages/scipy/optimize/_cobyla.so
+7f1bee5a5000-7f1bee5af000 r-xp 00000000 08:12 33819742                   /home/llq/anaconda2/lib/python2.7/site-packages/scipy/optimize/moduleTNC.so
+7f1bee5af000-7f1bee7ae000 ---p 0000a000 08:12 33819742                   /home/llq/anaconda2/lib/python2.7/site-packages/scipy/optimize/moduleTNC.so
+7f1bee7ae000-7f1bee7af000 rw-p 00009000 08:12 33819742                   /home/llq/anaconda2/lib/python2.7/site-packages/scipy/optimize/moduleTNC.so
+7f1bee7af000-7f1bee7cc000 r-xp 00000000 08:12 33819690                   /home/llq/anaconda2/lib/python2.7/site-packages/scipy/optimize/_lbfgsb.so
+7f1bee7cc000-7f1bee9cc000 ---p 0001d000 08:12 33819690                   /home/llq/anaconda2/lib/python2.7/site-packages/scipy/optimize/_lbfgsb.so
+7f1bee9cc000-7f1bee9cd000 rw-p 0001d000 08:12 33819690                   /home/llq/anaconda2/lib/python2.7/site-packages/scipy/optimize/_lbfgsb.so
+7f1bee9cd000-7f1bee9d6000 r-xp 00000000 08:12 33819741                   /home/llq/anaconda2/lib/python2.7/site-packages/scipy/optimize/minpack2.so
+7f1bee9d6000-7f1beebd6000 ---p 00009000 08:12 33819741                   /home/llq/anaconda2/lib/python2.7/site-packages/scipy/optimize/minpack2.so
+7f1beebd6000-7f1beebd7000 rw-p 00009000 08:12 33819741                   /home/llq/anaconda2/lib/python2.7/site-packages/scipy/optimize/minpack2.so
+7f1beebd7000-7f1beec66000 r-xp 00000000 08:12 33819971                   /home/llq/anaconda2/lib/python2.7/site-packages/scipy/sparse/linalg/eigen/arpack/_arpack.so
+7f1beec66000-7f1beee65000 ---p 0008f000 08:12 33819971                   /home/llq/anaconda2/lib/python2.7/site-packages/scipy/sparse/linalg/eigen/arpack/_arpack.so
+7f1beee65000-7f1beee71000 rw-p 0008e000 08:12 33819971                   /home/llq/anaconda2/lib/python2.7/site-packages/scipy/sparse/linalg/eigen/arpack/_arpack.so
+7f1beee71000-7f1beeec7000 r-xp 00000000 08:12 33819957                   /home/llq/anaconda2/lib/python2.7/site-packages/scipy/sparse/linalg/dsolve/_superlu.so
+7f1beeec7000-7f1bef0c6000 ---p 00056000 08:12 33819957                   /home/llq/anaconda2/lib/python2.7/site-packages/scipy/sparse/linalg/dsolve/_superlu.so
+7f1bef0c6000-7f1bef0c8000 rw-p 00055000 08:12 33819957                   /home/llq/anaconda2/lib/python2.7/site-packages/scipy/sparse/linalg/dsolve/_superlu.so
+7f1bef0c8000-7f1bef0fd000 r-xp 00000000 08:12 33819996                   /home/llq/anaconda2/lib/python2.7/site-packages/scipy/sparse/linalg/isolve/_iterative.so
+7f1bef0fd000-7f1bef2fd000 ---p 00035000 08:12 33819996                   /home/llq/anaconda2/lib/python2.7/site-packages/scipy/sparse/linalg/isolve/_iterative.so
+7f1bef2fd000-7f1bef305000 rw-p 00035000 08:12 33819996                   /home/llq/anaconda2/lib/python2.7/site-packages/scipy/sparse/linalg/isolve/_iterative.so
+7f1bef305000-7f1bef306000 rw-p 00000000 00:00 0 
+7f1bef306000-7f1bef33d000 r-xp 00000000 08:12 33819088                   /home/llq/anaconda2/lib/python2.7/site-packages/scipy/integrate/lsoda.so
+7f1bef33d000-7f1bef53c000 ---p 00037000 08:12 33819088                   /home/llq/anaconda2/lib/python2.7/site-packages/scipy/integrate/lsoda.so
+7f1bef53c000-7f1bef53e000 rw-p 00036000 08:12 33819088                   /home/llq/anaconda2/lib/python2.7/site-packages/scipy/integrate/lsoda.so
+7f1bef53e000-7f1bef55e000 r-xp 00000000 08:12 33819081                   /home/llq/anaconda2/lib/python2.7/site-packages/scipy/integrate/_dop.so
+7f1bef55e000-7f1bef75d000 ---p 00020000 08:12 33819081                   /home/llq/anaconda2/lib/python2.7/site-packages/scipy/integrate/_dop.so
+7f1bef75d000-7f1bef75f000 rw-p 0001f000 08:12 33819081                   /home/llq/anaconda2/lib/python2.7/site-packages/scipy/integrate/_dop.so
+7f1bef75f000-7f1bef798000 r-xp 00000000 08:12 33819112                   /home/llq/anaconda2/lib/python2.7/site-packages/scipy/integrate/vode.so
+7f1bef798000-7f1bef997000 ---p 00039000 08:12 33819112                   /home/llq/anaconda2/lib/python2.7/site-packages/scipy/integrate/vode.so
+7f1bef997000-7f1bef999000 rw-p 00038000 08:12 33819112                   /home/llq/anaconda2/lib/python2.7/site-packages/scipy/integrate/vode.so
+7f1bef999000-7f1bef99a000 rw-p 00000000 00:00 0 
+7f1bef99a000-7f1bef9b8000 r-xp 00000000 08:12 33819085                   /home/llq/anaconda2/lib/python2.7/site-packages/scipy/integrate/_quadpack.so
+7f1bef9b8000-7f1befbb8000 ---p 0001e000 08:12 33819085                   /home/llq/anaconda2/lib/python2.7/site-packages/scipy/integrate/_quadpack.so
+7f1befbb8000-7f1befbb9000 rw-p 0001e000 08:12 33819085                   /home/llq/anaconda2/lib/python2.7/site-packages/scipy/integrate/_quadpack.so
+7f1befbb9000-7f1befbec000 r-xp 00000000 08:12 33819084                   /home/llq/anaconda2/lib/python2.7/site-packages/scipy/integrate/_odepack.so
+7f1befbec000-7f1befdeb000 ---p 00033000 08:12 33819084                   /home/llq/anaconda2/lib/python2.7/site-packages/scipy/integrate/_odepack.so
+7f1befdeb000-7f1befded000 rw-p 00032000 08:12 33819084                   /home/llq/anaconda2/lib/python2.7/site-packages/scipy/integrate/_odepack.so
+7f1befded000-7f1befdff000 r-xp 00000000 08:12 33820141                   /home/llq/anaconda2/lib/python2.7/site-packages/scipy/special/_ellip_harm_2.so
+7f1befdff000-7f1befffe000 ---p 00012000 08:12 33820141                   /home/llq/anaconda2/lib/python2.7/site-packages/scipy/special/_ellip_harm_2.so
+7f1befffe000-7f1bf0000000 rw-p 00011000 08:12 33820141                   /home/llq/anaconda2/lib/python2.7/site-packages/scipy/special/_ellip_harm_2.so
+7f1bf0000000-7f1bf0021000 rw-p 00000000 00:00 0 
+7f1bf0021000-7f1bf4000000 ---p 00000000 00:00 0 
+7f1bf4000000-7f1bf4021000 rw-p 00000000 00:00 0 
+7f1bf4021000-7f1bf8000000 ---p 00000000 00:00 0 
+7f1bf8000000-7f1bf8100000 rw-p 00000000 00:00 0 
+7f1bf8100000-7f1bfc000000 ---p 00000000 00:00 0 
+7f1bfc000000-7f1bfc021000 rw-p 00000000 00:00 0 
+7f1bfc021000-7f1c00000000 ---p 00000000 00:00 0 
+7f1c00000000-7f1c009d1000 rw-p 00000000 00:00 0 
+7f1c009d1000-7f1c04000000 ---p 00000000 00:00 0 
+7f1c04000000-7f1c04e5e000 rw-p 00000000 00:00 0 
+7f1c04e5e000-7f1c08000000 ---p 00000000 00:00 0 
+7f1c08000000-7f1c08021000 rw-p 00000000 00:00 0 
+7f1c08021000-7f1c0c000000 ---p 00000000 00:00 0 
+7f1c0c000000-7f1c0c021000 rw-p 00000000 00:00 0 
+7f1c0c021000-7f1c10000000 ---p 00000000 00:00 0 
+7f1c10000000-7f1c10021000 rw-p 00000000 00:00 0 
+7f1c10021000-7f1c14000000 ---p 00000000 00:00 0 
+7f1c14000000-7f1c14021000 rw-p 00000000 00:00 0 
+7f1c14021000-7f1c18000000 ---p 00000000 00:00 0 
+7f1c18000000-7f1c18021000 rw-p 00000000 00:00 0 
+7f1c18021000-7f1c1c000000 ---p 00000000 00:00 0 
+7f1c1c000000-7f1c1c021000 rw-p 00000000 00:00 0 
+7f1c1c021000-7f1c20000000 ---p 00000000 00:00 0 
+7f1c20000000-7f1c20021000 rw-p 00000000 00:00 0 
+7f1c20021000-7f1c24000000 ---p 00000000 00:00 0 
+7f1c2401d000-7f1c2415d000 rw-p 00000000 00:00 0 
+7f1c2415d000-7f1c24163000 r-xp 00000000 08:12 33820138                   /home/llq/anaconda2/lib/python2.7/site-packages/scipy/special/_comb.so
+7f1c24163000-7f1c24362000 ---p 00006000 08:12 33820138                   /home/llq/anaconda2/lib/python2.7/site-packages/scipy/special/_comb.so
+7f1c24362000-7f1c24363000 rw-p 00005000 08:12 33820138                   /home/llq/anaconda2/lib/python2.7/site-packages/scipy/special/_comb.so
+7f1c24363000-7f1c243a3000 rw-p 00000000 00:00 0 
+7f1c243a3000-7f1c24431000 r-xp 00000000 08:12 33819502                   /home/llq/anaconda2/lib/python2.7/site-packages/scipy/linalg/cython_lapack.so
+7f1c24431000-7f1c24630000 ---p 0008e000 08:12 33819502                   /home/llq/anaconda2/lib/python2.7/site-packages/scipy/linalg/cython_lapack.so
+7f1c24630000-7f1c24634000 rw-p 0008d000 08:12 33819502                   /home/llq/anaconda2/lib/python2.7/site-packages/scipy/linalg/cython_lapack.so
+7f1c24634000-7f1c2466d000 r-xp 00000000 08:12 33819500                   /home/llq/anaconda2/lib/python2.7/site-packages/scipy/linalg/cython_blas.so
+7f1c2466d000-7f1c2486d000 ---p 00039000 08:12 33819500                   /home/llq/anaconda2/lib/python2.7/site-packages/scipy/linalg/cython_blas.so
+7f1c2486d000-7f1c24870000 rw-p 00039000 08:12 33819500                   /home/llq/anaconda2/lib/python2.7/site-packages/scipy/linalg/cython_blas.so
+7f1c24870000-7f1c24871000 rw-p 00000000 00:00 0 
+7f1c24871000-7f1c248b7000 r-xp 00000000 08:12 33819473                   /home/llq/anaconda2/lib/python2.7/site-packages/scipy/linalg/_decomp_update.so
+7f1c248b7000-7f1c24ab7000 ---p 00046000 08:12 33819473                   /home/llq/anaconda2/lib/python2.7/site-packages/scipy/linalg/_decomp_update.so
+7f1c24ab7000-7f1c24abd000 rw-p 00046000 08:12 33819473                   /home/llq/anaconda2/lib/python2.7/site-packages/scipy/linalg/_decomp_update.so
+7f1c24abd000-7f1c24af0000 r-xp 00000000 08:12 33819488                   /home/llq/anaconda2/lib/python2.7/site-packages/scipy/linalg/_solve_toeplitz.so
+7f1c24af0000-7f1c24cf0000 ---p 00033000 08:12 33819488                   /home/llq/anaconda2/lib/python2.7/site-packages/scipy/linalg/_solve_toeplitz.so
+7f1c24cf0000-7f1c24cf4000 rw-p 00033000 08:12 33819488                   /home/llq/anaconda2/lib/python2.7/site-packages/scipy/linalg/_solve_toeplitz.so
+7f1c24cf4000-7f1c24d34000 rw-p 00000000 00:00 0 
+7f1c24d34000-7f1c24d40000 r-xp 00000000 08:12 33819478                   /home/llq/anaconda2/lib/python2.7/site-packages/scipy/linalg/_flinalg.so
+7f1c24d40000-7f1c24f40000 ---p 0000c000 08:12 33819478                   /home/llq/anaconda2/lib/python2.7/site-packages/scipy/linalg/_flinalg.so
+7f1c24f40000-7f1c24f43000 rw-p 0000c000 08:12 33819478                   /home/llq/anaconda2/lib/python2.7/site-packages/scipy/linalg/_flinalg.so
+7f1c24f43000-7f1c25003000 r-xp 00000000 08:12 33819477                   /home/llq/anaconda2/lib/python2.7/site-packages/scipy/linalg/_flapack.so
+7f1c25003000-7f1c25203000 ---p 000c0000 08:12 33819477                   /home/llq/anaconda2/lib/python2.7/site-packages/scipy/linalg/_flapack.so
+7f1c25203000-7f1c2524b000 rw-p 000c0000 08:12 33819477                   /home/llq/anaconda2/lib/python2.7/site-packages/scipy/linalg/_flapack.so
+7f1c2524b000-7f1c25293000 r-xp 00000000 08:12 33819476                   /home/llq/anaconda2/lib/python2.7/site-packages/scipy/linalg/_fblas.so
+7f1c25293000-7f1c25492000 ---p 00048000 08:12 33819476                   /home/llq/anaconda2/lib/python2.7/site-packages/scipy/linalg/_fblas.so
+7f1c25492000-7f1c254ac000 rw-p 00047000 08:12 33819476                   /home/llq/anaconda2/lib/python2.7/site-packages/scipy/linalg/_fblas.so
+7f1c254ac000-7f1c254ec000 rw-p 00000000 00:00 0 
+7f1c254ec000-7f1c255b9000 r-xp 00000000 08:12 33820184                   /home/llq/anaconda2/lib/python2.7/site-packages/scipy/special/specfun.so
+7f1c255b9000-7f1c257b9000 ---p 000cd000 08:12 33820184                   /home/llq/anaconda2/lib/python2.7/site-packages/scipy/special/specfun.so
+7f1c257b9000-7f1c257c1000 rw-p 000cd000 08:12 33820184                   /home/llq/anaconda2/lib/python2.7/site-packages/scipy/special/specfun.so
+7f1c257c1000-7f1c257dc000 r-xp 00000000 08:12 33820167                   /home/llq/anaconda2/lib/python2.7/site-packages/scipy/special/_ufuncs_cxx.so
+7f1c257dc000-7f1c259db000 ---p 0001b000 08:12 33820167                   /home/llq/anaconda2/lib/python2.7/site-packages/scipy/special/_ufuncs_cxx.so
+7f1c259db000-7f1c259dc000 rw-p 0001a000 08:12 33820167                   /home/llq/anaconda2/lib/python2.7/site-packages/scipy/special/_ufuncs_cxx.so
+7f1c259dc000-7f1c259dd000 rw-p 00000000 00:00 0 
+7f1c259dd000-7f1c25adc000 r-xp 00000000 08:12 27528234                   /home/llq/anaconda2/lib/libgfortran.so.3.0.0
+7f1c25adc000-7f1c25cdc000 ---p 000ff000 08:12 27528234                   /home/llq/anaconda2/lib/libgfortran.so.3.0.0
+7f1c25cdc000-7f1c25cde000 rw-p 000ff000 08:12 27528234                   /home/llq/anaconda2/lib/libgfortran.so.3.0.0
+7f1c25cde000-7f1c25ce6000 rw-p 00102000 08:12 27528234                   /home/llq/anaconda2/lib/libgfortran.so.3.0.0
+7f1c25ce6000-7f1c25e8c000 r-xp 00000000 08:12 33820166                   /home/llq/anaconda2/lib/python2.7/site-packages/scipy/special/_ufuncs.so
+7f1c25e8c000-7f1c2608b000 ---p 001a6000 08:12 33820166                   /home/llq/anaconda2/lib/python2.7/site-packages/scipy/special/_ufuncs.so
+7f1c2608b000-7f1c26097000 rw-p 001a5000 08:12 33820166                   /home/llq/anaconda2/lib/python2.7/site-packages/scipy/special/_ufuncs.so
+7f1c26097000-7f1c2635e000 rw-p 00000000 00:00 0 
+7f1c2635e000-7f1c2635f000 r-xp 00000000 08:12 27395989                   /home/llq/anaconda2/lib/python2.7/site-packages/cryptography/hazmat/bindings/_constant_time.so
+7f1c2635f000-7f1c2655f000 ---p 00001000 08:12 27395989                   /home/llq/anaconda2/lib/python2.7/site-packages/cryptography/hazmat/bindings/_constant_time.so
+7f1c2655f000-7f1c26560000 rw-p 00001000 08:12 27395989                   /home/llq/anaconda2/lib/python2.7/site-packages/cryptography/hazmat/bindings/_constant_time.so
+7f1c26560000-7f1c266e0000 rw-p 00000000 00:00 0 
+7f1c266e0000-7f1c266e8000 r-xp 00000000 08:12 27528207                   /home/llq/anaconda2/lib/libffi.so.6.0.4
+7f1c266e8000-7f1c268e8000 ---p 00008000 08:12 27528207                   /home/llq/anaconda2/lib/libffi.so.6.0.4
+7f1c268e8000-7f1c268e9000 rw-p 00008000 08:12 27528207                   /home/llq/anaconda2/lib/libffi.so.6.0.4
+7f1c268e9000-7f1c2690b000 r-xp 00000000 08:12 27395644                   /home/llq/anaconda2/lib/python2.7/site-packages/_cffi_backend.so
+7f1c2690b000-7f1c26b0b000 ---p 00022000 08:12 27395644                   /home/llq/anaconda2/lib/python2.7/site-packages/_cffi_backend.so
+7f1c26b0b000-7f1c26b11000 rw-p 00022000 08:12 27395644                   /home/llq/anaconda2/lib/python2.7/site-packages/_cffi_backend.so
+7f1c26b11000-7f1c26b13000 rw-p 00000000 00:00 0 
+7f1c26b13000-7f1c26bdc000 r-xp 00000000 08:12 27395990                   /home/llq/anaconda2/lib/python2.7/site-packages/cryptography/hazmat/bindings/_openssl.so
+7f1c26bdc000-7f1c26ddc000 ---p 000c9000 08:12 27395990                   /home/llq/anaconda2/lib/python2.7/site-packages/cryptography/hazmat/bindings/_openssl.so
+7f1c26ddc000-7f1c26df7000 rw-p 000c9000 08:12 27395990                   /home/llq/anaconda2/lib/python2.7/site-packages/cryptography/hazmat/bindings/_openssl.so
+7f1c26df7000-7f1c26ef7000 rw-p 00000000 00:00 0 
+7f1c26ef7000-7f1c26f42000 r-xp 00000000 08:12 33819904                   /home/llq/anaconda2/lib/python2.7/site-packages/scipy/sparse/csgraph/_reordering.so
+7f1c26f42000-7f1c27141000 ---p 0004b000 08:12 33819904                   /home/llq/anaconda2/lib/python2.7/site-packages/scipy/sparse/csgraph/_reordering.so
+7f1c27141000-7f1c27146000 rw-p 0004a000 08:12 33819904                   /home/llq/anaconda2/lib/python2.7/site-packages/scipy/sparse/csgraph/_reordering.so
+7f1c27146000-7f1c27147000 rw-p 00000000 00:00 0 
+7f1c27147000-7f1c27171000 r-xp 00000000 08:12 33819903                   /home/llq/anaconda2/lib/python2.7/site-packages/scipy/sparse/csgraph/_min_spanning_tree.so
+7f1c27171000-7f1c27370000 ---p 0002a000 08:12 33819903                   /home/llq/anaconda2/lib/python2.7/site-packages/scipy/sparse/csgraph/_min_spanning_tree.so
+7f1c27370000-7f1c27373000 rw-p 00029000 08:12 33819903                   /home/llq/anaconda2/lib/python2.7/site-packages/scipy/sparse/csgraph/_min_spanning_tree.so
+7f1c27373000-7f1c27374000 rw-p 00000000 00:00 0 
+7f1c27374000-7f1c27393000 r-xp 00000000 08:12 33819907                   /home/llq/anaconda2/lib/python2.7/site-packages/scipy/sparse/csgraph/_traversal.so
+7f1c27393000-7f1c27593000 ---p 0001f000 08:12 33819907                   /home/llq/anaconda2/lib/python2.7/site-packages/scipy/sparse/csgraph/_traversal.so
+7f1c27593000-7f1c27597000 rw-p 0001f000 08:12 33819907                   /home/llq/anaconda2/lib/python2.7/site-packages/scipy/sparse/csgraph/_traversal.so
+7f1c27597000-7f1c275d4000 r-xp 00000000 08:12 33819905                   /home/llq/anaconda2/lib/python2.7/site-packages/scipy/sparse/csgraph/_shortest_path.so
+7f1c275d4000-7f1c277d3000 ---p 0003d000 08:12 33819905                   /home/llq/anaconda2/lib/python2.7/site-packages/scipy/sparse/csgraph/_shortest_path.so
+7f1c277d3000-7f1c277d9000 rw-p 0003c000 08:12 33819905                   /home/llq/anaconda2/lib/python2.7/site-packages/scipy/sparse/csgraph/_shortest_path.so
+7f1c277d9000-7f1c27851000 r-xp 00000000 08:12 33819880                   /home/llq/anaconda2/lib/python2.7/site-packages/scipy/sparse/_csparsetools.so
+7f1c27851000-7f1c27a51000 ---p 00078000 08:12 33819880                   /home/llq/anaconda2/lib/python2.7/site-packages/scipy/sparse/_csparsetools.so
+7f1c27a51000-7f1c27a56000 rw-p 00078000 08:12 33819880                   /home/llq/anaconda2/lib/python2.7/site-packages/scipy/sparse/_csparsetools.so
+7f1c27a56000-7f1c27a57000 rw-p 00000000 00:00 0 
+7f1c27a57000-7f1c27dfa000 r-xp 00000000 08:12 33819883                   /home/llq/anaconda2/lib/python2.7/site-packages/scipy/sparse/_sparsetools.so
+7f1c27dfa000-7f1c27ff9000 ---p 003a3000 08:12 33819883                   /home/llq/anaconda2/lib/python2.7/site-packages/scipy/sparse/_sparsetools.so
+7f1c27ff9000-7f1c28000000 rw-p 003a2000 08:12 33819883                   /home/llq/anaconda2/lib/python2.7/site-packages/scipy/sparse/_sparsetools.so
+7f1c28000000-7f1c28021000 rw-p 00000000 00:00 0 
+7f1c28021000-7f1c2c000000 ---p 00000000 00:00 0 
+7f1c2c001000-7f1c2c025000 r-xp 00000000 08:12 33819906                   /home/llq/anaconda2/lib/python2.7/site-packages/scipy/sparse/csgraph/_tools.so
+7f1c2c025000-7f1c2c224000 ---p 00024000 08:12 33819906                   /home/llq/anaconda2/lib/python2.7/site-packages/scipy/sparse/csgraph/_tools.so
+7f1c2c224000-7f1c2c228000 rw-p 00023000 08:12 33819906                   /home/llq/anaconda2/lib/python2.7/site-packages/scipy/sparse/csgraph/_tools.so
+7f1c2c228000-7f1c2c268000 rw-p 00000000 00:00 0 
+7f1c2c268000-7f1c2c277000 r-xp 00000000 08:12 33818971                   /home/llq/anaconda2/lib/python2.7/site-packages/scipy/_lib/_ccallback_c.so
+7f1c2c277000-7f1c2c476000 ---p 0000f000 08:12 33818971                   /home/llq/anaconda2/lib/python2.7/site-packages/scipy/_lib/_ccallback_c.so
+7f1c2c476000-7f1c2c478000 rw-p 0000e000 08:12 33818971                   /home/llq/anaconda2/lib/python2.7/site-packages/scipy/_lib/_ccallback_c.so
+7f1c2c478000-7f1c2c489000 r-xp 00000000 08:12 25954400                   /home/llq/software/jdk/jdk1.8.0_121/jre/lib/amd64/libnio.so
+7f1c2c489000-7f1c2c688000 ---p 00011000 08:12 25954400                   /home/llq/software/jdk/jdk1.8.0_121/jre/lib/amd64/libnio.so
+7f1c2c688000-7f1c2c689000 rw-p 00010000 08:12 25954400                   /home/llq/software/jdk/jdk1.8.0_121/jre/lib/amd64/libnio.so
+7f1c2c689000-7f1c2c69f000 r-xp 00000000 08:12 25954375                   /home/llq/software/jdk/jdk1.8.0_121/jre/lib/amd64/libnet.so
+7f1c2c69f000-7f1c2c89f000 ---p 00016000 08:12 25954375                   /home/llq/software/jdk/jdk1.8.0_121/jre/lib/amd64/libnet.so
+7f1c2c89f000-7f1c2c8a0000 rw-p 00016000 08:12 25954375                   /home/llq/software/jdk/jdk1.8.0_121/jre/lib/amd64/libnet.so
+7f1c2c8a0000-7f1c2c8a3000 ---p 00000000 00:00 0 
+7f1c2c8a3000-7f1c2c9a1000 rw-p 00000000 00:00 0 
+7f1c2c9a1000-7f1c2c9a2000 ---p 00000000 00:00 0 
+7f1c2c9a2000-7f1c2caa2000 rw-p 00000000 00:00 0 
+7f1c2caa2000-7f1c2caa5000 ---p 00000000 00:00 0 
+7f1c2caa5000-7f1c2cba3000 rw-p 00000000 00:00 0 
+7f1c2cba3000-7f1c2cba6000 ---p 00000000 00:00 0 
+7f1c2cba6000-7f1c2cca4000 rw-p 00000000 00:00 0 
+7f1c2cca4000-7f1c2cca7000 ---p 00000000 00:00 0 
+7f1c2cca7000-7f1c2cda5000 rw-p 00000000 00:00 0 
+7f1c2cda5000-7f1c2cda8000 ---p 00000000 00:00 0 
+7f1c2cda8000-7f1c2cea6000 rw-p 00000000 00:00 0 
+7f1c2cea6000-7f1c2cea9000 ---p 00000000 00:00 0 
+7f1c2cea9000-7f1c2cfa7000 rw-p 00000000 00:00 0 
+7f1c2cfa7000-7f1c2cfaa000 ---p 00000000 00:00 0 
+7f1c2cfaa000-7f1c2d0a8000 rw-p 00000000 00:00 0 
+7f1c2d0a8000-7f1c2d0ab000 ---p 00000000 00:00 0 
+7f1c2d0ab000-7f1c2d1a9000 rw-p 00000000 00:00 0 
+7f1c2d1a9000-7f1c2d1aa000 ---p 00000000 00:00 0 
+7f1c2d1aa000-7f1c2d2aa000 rw-p 00000000 00:00 0 
+7f1c2d2aa000-7f1c2d483000 r--s 03d3e000 08:12 25561728                   /home/llq/software/jdk/jdk1.8.0_121/jre/lib/rt.jar
+7f1c2d483000-7f1c2d983000 rw-p 00000000 00:00 0 
+7f1c2d983000-7f1c2dc83000 ---p 00000000 00:00 0 
+7f1c2dc83000-7f1c32083000 rw-p 00000000 00:00 0 
+7f1c32083000-7f1c32084000 ---p 00000000 00:00 0 
+7f1c32084000-7f1c32184000 rw-p 00000000 00:00 0 
+7f1c32184000-7f1c32185000 ---p 00000000 00:00 0 
+7f1c32185000-7f1c32285000 rw-p 00000000 00:00 0 
+7f1c32285000-7f1c32286000 ---p 00000000 00:00 0 
+7f1c32286000-7f1c32386000 rw-p 00000000 00:00 0 
+7f1c32386000-7f1c32387000 ---p 00000000 00:00 0 
+7f1c32387000-7f1c32634000 rw-p 00000000 00:00 0 
+7f1c32634000-7f1c32732000 ---p 00000000 00:00 0 
+7f1c32732000-7f1c328df000 rw-p 00000000 00:00 0 
+7f1c328df000-7f1c329dc000 ---p 00000000 00:00 0 
+7f1c329dc000-7f1c32b32000 rw-p 00000000 00:00 0 
+7f1c32b32000-7f1c32b3f000 rw-p 00000000 00:00 0 
+7f1c32b3f000-7f1c32ef3000 ---p 00000000 00:00 0 
+7f1c32ef3000-7f1c331f3000 rwxp 00000000 00:00 0 
+7f1c331f3000-7f1c41ef3000 ---p 00000000 00:00 0 
+7f1c41ef3000-7f1c41f0d000 r-xp 00000000 08:12 25954398                   /home/llq/software/jdk/jdk1.8.0_121/jre/lib/amd64/libzip.so
+7f1c41f0d000-7f1c4210d000 ---p 0001a000 08:12 25954398                   /home/llq/software/jdk/jdk1.8.0_121/jre/lib/amd64/libzip.so
+7f1c4210d000-7f1c4210e000 rw-p 0001a000 08:12 25954398                   /home/llq/software/jdk/jdk1.8.0_121/jre/lib/amd64/libzip.so
+7f1c4210e000-7f1c42119000 r-xp 00000000 08:12 3145928                    /lib/x86_64-linux-gnu/libnss_files-2.23.so
+7f1c42119000-7f1c42318000 ---p 0000b000 08:12 3145928                    /lib/x86_64-linux-gnu/libnss_files-2.23.so
+7f1c42318000-7f1c42319000 r--p 0000a000 08:12 3145928                    /lib/x86_64-linux-gnu/libnss_files-2.23.so
+7f1c42319000-7f1c4231a000 rw-p 0000b000 08:12 3145928                    /lib/x86_64-linux-gnu/libnss_files-2.23.so
+7f1c4231a000-7f1c42320000 rw-p 00000000 00:00 0 
+7f1c42320000-7f1c4232b000 r-xp 00000000 08:12 3145932                    /lib/x86_64-linux-gnu/libnss_nis-2.23.so
+7f1c4232b000-7f1c4252a000 ---p 0000b000 08:12 3145932                    /lib/x86_64-linux-gnu/libnss_nis-2.23.so
+7f1c4252a000-7f1c4252b000 r--p 0000a000 08:12 3145932                    /lib/x86_64-linux-gnu/libnss_nis-2.23.so
+7f1c4252b000-7f1c4252c000 rw-p 0000b000 08:12 3145932                    /lib/x86_64-linux-gnu/libnss_nis-2.23.so
+7f1c4252c000-7f1c42542000 r-xp 00000000 08:12 3145904                    /lib/x86_64-linux-gnu/libnsl-2.23.so
+7f1c42542000-7f1c42741000 ---p 00016000 08:12 3145904                    /lib/x86_64-linux-gnu/libnsl-2.23.so
+7f1c42741000-7f1c42742000 r--p 00015000 08:12 3145904                    /lib/x86_64-linux-gnu/libnsl-2.23.so
+7f1c42742000-7f1c42743000 rw-p 00016000 08:12 3145904                    /lib/x86_64-linux-gnu/libnsl-2.23.so
+7f1c42743000-7f1c42745000 rw-p 00000000 00:00 0 
+7f1c42745000-7f1c4274d000 r-xp 00000000 08:12 3145923                    /lib/x86_64-linux-gnu/libnss_compat-2.23.so
+7f1c4274d000-7f1c4294c000 ---p 00008000 08:12 3145923                    /lib/x86_64-linux-gnu/libnss_compat-2.23.so
+7f1c4294c000-7f1c4294d000 r--p 00007000 08:12 3145923                    /lib/x86_64-linux-gnu/libnss_compat-2.23.so
+7f1c4294d000-7f1c4294e000 rw-p 00008000 08:12 3145923                    /lib/x86_64-linux-gnu/libnss_compat-2.23.so
+7f1c4294e000-7f1c42979000 r-xp 00000000 08:12 25954425                   /home/llq/software/jdk/jdk1.8.0_121/jre/lib/amd64/libjava.so
+7f1c42979000-7f1c42b78000 ---p 0002b000 08:12 25954425                   /home/llq/software/jdk/jdk1.8.0_121/jre/lib/amd64/libjava.so
+7f1c42b78000-7f1c42b7a000 rw-p 0002a000 08:12 25954425                   /home/llq/software/jdk/jdk1.8.0_121/jre/lib/amd64/libjava.so
+7f1c42b7a000-7f1c42b87000 r-xp 00000000 08:12 25954376                   /home/llq/software/jdk/jdk1.8.0_121/jre/lib/amd64/libverify.so
+7f1c42b87000-7f1c42d86000 ---p 0000d000 08:12 25954376                   /home/llq/software/jdk/jdk1.8.0_121/jre/lib/amd64/libverify.so
+7f1c42d86000-7f1c42d88000 rw-p 0000c000 08:12 25954376                   /home/llq/software/jdk/jdk1.8.0_121/jre/lib/amd64/libverify.so
+7f1c42d88000-7f1c43a56000 r-xp 00000000 08:12 25954429                   /home/llq/software/jdk/jdk1.8.0_121/jre/lib/amd64/server/libjvm.so
+7f1c43a56000-7f1c43c56000 ---p 00cce000 08:12 25954429                   /home/llq/software/jdk/jdk1.8.0_121/jre/lib/amd64/server/libjvm.so
+7f1c43c56000-7f1c43d2f000 rw-p 00cce000 08:12 25954429                   /home/llq/software/jdk/jdk1.8.0_121/jre/lib/amd64/server/libjvm.so
+7f1c43d2f000-7f1c43d7a000 rw-p 00000000 00:00 0 
+7f1c43d7a000-7f1c43dfa000 r-xp 00000000 08:12 28705330                   /home/llq/anaconda2/lib/python2.7/site-packages/_jpype.so
+7f1c43dfa000-7f1c43ffa000 ---p 00080000 08:12 28705330                   /home/llq/anaconda2/lib/python2.7/site-packages/_jpype.so
+7f1c43ffa000-7f1c43ffc000 r--p 00080000 08:12 28705330                   /home/llq/anaconda2/lib/python2.7/site-packages/_jpype.so
+7f1c43ffc000-7f1c44000000 rw-p 00082000 08:12 28705330                   /home/llq/anaconda2/lib/python2.7/site-packages/_jpype.so
+7f1c44000000-7f1c44021000 rw-p 00000000 00:00 0 
+7f1c44021000-7f1c48000000 ---p 00000000 00:00 0 
+7f1c48020000-7f1c48160000 rw-p 00000000 00:00 0 
+7f1c48160000-7f1c482b0000 r-xp 00000000 08:12 27531039                   /home/llq/anaconda2/lib/libxml2.so.2.9.2
+7f1c482b0000-7f1c484af000 ---p 00150000 08:12 27531039                   /home/llq/anaconda2/lib/libxml2.so.2.9.2
+7f1c484af000-7f1c484b9000 rw-p 0014f000 08:12 27531039                   /home/llq/anaconda2/lib/libxml2.so.2.9.2
+7f1c484b9000-7f1c484ba000 rw-p 00000000 00:00 0 
+7f1c484ba000-7f1c484cc000 r-xp 00000000 08:12 27531314                   /home/llq/anaconda2/lib/libexslt.so.0.8.17
+7f1c484cc000-7f1c486cb000 ---p 00012000 08:12 27531314                   /home/llq/anaconda2/lib/libexslt.so.0.8.17
+7f1c486cb000-7f1c486cc000 rw-p 00011000 08:12 27531314                   /home/llq/anaconda2/lib/libexslt.so.0.8.17
+7f1c486cc000-7f1c48705000 r-xp 00000000 08:12 27531319                   /home/llq/anaconda2/lib/libxslt.so.1.1.28
+7f1c48705000-7f1c48904000 ---p 00039000 08:12 27531319                   /home/llq/anaconda2/lib/libxslt.so.1.1.28
+7f1c48904000-7f1c48906000 rw-p 00038000 08:12 27531319                   /home/llq/anaconda2/lib/libxslt.so.1.1.28
+7f1c48906000-7f1c48a7c000 r-xp 00000000 08:12 27531569                   /home/llq/anaconda2/lib/python2.7/site-packages/lxml/etree.so
+7f1c48a7c000-7f1c48c7c000 ---p 00176000 08:12 27531569                   /home/llq/anaconda2/lib/python2.7/site-packages/lxml/etree.so
+7f1c48c7c000-7f1c48cb3000 rw-p 00176000 08:12 27531569                   /home/llq/anaconda2/lib/python2.7/site-packages/lxml/etree.so
+7f1c48cb3000-7f1c48cf8000 rw-p 00000000 00:00 0 
+7f1c48cf8000-7f1c48d34000 r-xp 00000000 08:12 40902394                   /home/llq/anaconda2/lib/python2.7/lib-dynload/pyexpat.so
+7f1c48d34000-7f1c48f33000 ---p 0003c000 08:12 40902394                   /home/llq/anaconda2/lib/python2.7/lib-dynload/pyexpat.so
+7f1c48f33000-7f1c48f37000 rw-p 0003b000 08:12 40902394                   /home/llq/anaconda2/lib/python2.7/lib-dynload/pyexpat.so
+7f1c48f37000-7f1c48f77000 rw-p 00000000 00:00 0 
+7f1c48f77000-7f1c48f83000 r-xp 00000000 08:12 40902372                   /home/llq/anaconda2/lib/python2.7/lib-dynload/_elementtree.so
+7f1c48f83000-7f1c49183000 ---p 0000c000 08:12 40902372                   /home/llq/anaconda2/lib/python2.7/lib-dynload/_elementtree.so
+7f1c49183000-7f1c49184000 rw-p 0000c000 08:12 40902372                   /home/llq/anaconda2/lib/python2.7/lib-dynload/_elementtree.so
+7f1c49184000-7f1c49304000 rw-p 00000000 00:00 0 
+7f1c49304000-7f1c49305000 ---p 00000000 00:00 0 
+7f1c49305000-7f1c49d45000 rw-p 00000000 00:00 0 
+7f1c49d45000-7f1c49d9c000 r-xp 00000000 08:12 47318569                   /home/llq/anaconda2/lib/python2.7/site-packages/matplotlib/backends/_backend_agg.so
+7f1c49d9c000-7f1c49f9c000 ---p 00057000 08:12 47318569                   /home/llq/anaconda2/lib/python2.7/site-packages/matplotlib/backends/_backend_agg.so
+7f1c49f9c000-7f1c49f9d000 rw-p 00057000 08:12 47318569                   /home/llq/anaconda2/lib/python2.7/site-packages/matplotlib/backends/_backend_agg.so
+7f1c49f9d000-7f1c4a09e000 rw-p 00000000 00:00 0 
+7f1c4a09e000-7f1c4a0f8000 r-xp 00000000 08:12 47318097                   /home/llq/anaconda2/lib/python2.7/site-packages/matplotlib/_qhull.so
+7f1c4a0f8000-7f1c4a2f8000 ---p 0005a000 08:12 47318097                   /home/llq/anaconda2/lib/python2.7/site-packages/matplotlib/_qhull.so
+7f1c4a2f8000-7f1c4a2fa000 rw-p 0005a000 08:12 47318097                   /home/llq/anaconda2/lib/python2.7/site-packages/matplotlib/_qhull.so
+7f1c4a2fa000-7f1c4a2fc000 rw-p 00000000 00:00 0 
+7f1c4a2fc000-7f1c4a31b000 r-xp 00000000 08:12 47318227                   /home/llq/anaconda2/lib/python2.7/site-packages/matplotlib/_tri.so
+7f1c4a31b000-7f1c4a51a000 ---p 0001f000 08:12 47318227                   /home/llq/anaconda2/lib/python2.7/site-packages/matplotlib/_tri.so
+7f1c4a51a000-7f1c4a51c000 rw-p 0001e000 08:12 47318227                   /home/llq/anaconda2/lib/python2.7/site-packages/matplotlib/_tri.so
+7f1c4a51c000-7f1c4a59c000 rw-p 00000000 00:00 0 
+7f1c4a59c000-7f1c4a5d4000 r-xp 00000000 08:12 47318282                   /home/llq/anaconda2/lib/python2.7/site-packages/matplotlib/_image.so
+7f1c4a5d4000-7f1c4a7d4000 ---p 00038000 08:12 47318282                   /home/llq/anaconda2/lib/python2.7/site-packages/matplotlib/_image.so
+7f1c4a7d4000-7f1c4a7d5000 rw-p 00038000 08:12 47318282                   /home/llq/anaconda2/lib/python2.7/site-packages/matplotlib/_image.so
+7f1c4a7d5000-7f1c4a896000 rw-p 00000000 00:00 0 
+7f1c4a896000-7f1c4a8ba000 r-xp 00000000 08:12 28710251                   /home/llq/anaconda2/lib/liblzma.so.5.2.2
+7f1c4a8ba000-7f1c4aaba000 ---p 00024000 08:12 28710251                   /home/llq/anaconda2/lib/liblzma.so.5.2.2
+7f1c4aaba000-7f1c4aabb000 rw-p 00024000 08:12 28710251                   /home/llq/anaconda2/lib/liblzma.so.5.2.2
+7f1c4aabb000-7f1c4ab4a000 r-xp 00000000 08:12 40900359                   /home/llq/anaconda2/lib/libtiff.so.5.3.0
+7f1c4ab4a000-7f1c4ad4a000 ---p 0008f000 08:12 40900359                   /home/llq/anaconda2/lib/libtiff.so.5.3.0
+7f1c4ad4a000-7f1c4ad4e000 rw-p 0008f000 08:12 40900359                   /home/llq/anaconda2/lib/libtiff.so.5.3.0
+7f1c4ad4e000-7f1c4ad89000 r-xp 00000000 08:12 40894909                   /home/llq/anaconda2/lib/libjpeg.so.9.2.0
+7f1c4ad89000-7f1c4af88000 ---p 0003b000 08:12 40894909                   /home/llq/anaconda2/lib/libjpeg.so.9.2.0
+7f1c4af88000-7f1c4af89000 rw-p 0003a000 08:12 40894909                   /home/llq/anaconda2/lib/libjpeg.so.9.2.0
+7f1c4af89000-7f1c4aff8000 r-xp 00000000 08:12 29098284                   /home/llq/anaconda2/lib/python2.7/site-packages/PIL/_imaging.so
+7f1c4aff8000-7f1c4b1f7000 ---p 0006f000 08:12 29098284                   /home/llq/anaconda2/lib/python2.7/site-packages/PIL/_imaging.so
+7f1c4b1f7000-7f1c4b1fe000 rw-p 0006e000 08:12 29098284                   /home/llq/anaconda2/lib/python2.7/site-packages/PIL/_imaging.so
+7f1c4b1fe000-7f1c4b23e000 rw-p 00000000 00:00 0 
+7f1c4b23e000-7f1c4b252000 r-xp 00000000 08:12 47318824                   /home/llq/anaconda2/lib/python2.7/site-packages/matplotlib/.libs/libz-a147dcb0.so.1.2.3
+7f1c4b252000-7f1c4b451000 ---p 00014000 08:12 47318824                   /home/llq/anaconda2/lib/python2.7/site-packages/matplotlib/.libs/libz-a147dcb0.so.1.2.3
+7f1c4b451000-7f1c4b452000 rw-p 00013000 08:12 47318824                   /home/llq/anaconda2/lib/python2.7/site-packages/matplotlib/.libs/libz-a147dcb0.so.1.2.3
+7f1c4b452000-7f1c4b453000 rw-p 00015000 08:12 47318824                   /home/llq/anaconda2/lib/python2.7/site-packages/matplotlib/.libs/libz-a147dcb0.so.1.2.3
+7f1c4b453000-7f1c4b483000 r-xp 00000000 08:12 47318823                   /home/llq/anaconda2/lib/python2.7/site-packages/matplotlib/.libs/libpng16-3e9b18e2.so.16.21.0
+7f1c4b483000-7f1c4b682000 ---p 00030000 08:12 47318823                   /home/llq/anaconda2/lib/python2.7/site-packages/matplotlib/.libs/libpng16-3e9b18e2.so.16.21.0
+7f1c4b682000-7f1c4b683000 rw-p 0002f000 08:12 47318823                   /home/llq/anaconda2/lib/python2.7/site-packages/matplotlib/.libs/libpng16-3e9b18e2.so.16.21.0
+7f1c4b683000-7f1c4b687000 rw-p 000df000 08:12 47318823                   /home/llq/anaconda2/lib/python2.7/site-packages/matplotlib/.libs/libpng16-3e9b18e2.so.16.21.0
+7f1c4b687000-7f1c4b68e000 r-xp 00000000 08:12 47318053                   /home/llq/anaconda2/lib/python2.7/site-packages/matplotlib/_png.so
+7f1c4b68e000-7f1c4b88e000 ---p 00007000 08:12 47318053                   /home/llq/anaconda2/lib/python2.7/site-packages/matplotlib/_png.so
+7f1c4b88e000-7f1c4b88f000 rw-p 00007000 08:12 47318053                   /home/llq/anaconda2/lib/python2.7/site-packages/matplotlib/_png.so
+7f1c4b88f000-7f1c4b891000 rw-p 00029000 08:12 47318053                   /home/llq/anaconda2/lib/python2.7/site-packages/matplotlib/_png.so
+7f1c4b891000-7f1c4b911000 rw-p 00000000 00:00 0 
+7f1c4b911000-7f1c4b9e0000 r-xp 00000000 08:12 47318074                   /home/llq/anaconda2/lib/python2.7/site-packages/matplotlib/ft2font.so
+7f1c4b9e0000-7f1c4bbe0000 ---p 000cf000 08:12 47318074                   /home/llq/anaconda2/lib/python2.7/site-packages/matplotlib/ft2font.so
+7f1c4bbe0000-7f1c4bbe7000 rw-p 000cf000 08:12 47318074                   /home/llq/anaconda2/lib/python2.7/site-packages/matplotlib/ft2font.so
+7f1c4bbe7000-7f1c4bbf9000 r-xp 00000000 08:12 47318236                   /home/llq/anaconda2/lib/python2.7/site-packages/matplotlib/_contour.so
+7f1c4bbf9000-7f1c4bdf9000 ---p 00012000 08:12 47318236                   /home/llq/anaconda2/lib/python2.7/site-packages/matplotlib/_contour.so
+7f1c4bdf9000-7f1c4bdfa000 rw-p 00012000 08:12 47318236                   /home/llq/anaconda2/lib/python2.7/site-packages/matplotlib/_contour.so
+7f1c4bdfa000-7f1c4be00000 r-xp 00000000 08:12 47318051                   /home/llq/anaconda2/lib/python2.7/site-packages/matplotlib/_cntr.so
+7f1c4be00000-7f1c4bfff000 ---p 00006000 08:12 47318051                   /home/llq/anaconda2/lib/python2.7/site-packages/matplotlib/_cntr.so
+7f1c4bfff000-7f1c4c000000 rw-p 00005000 08:12 47318051                   /home/llq/anaconda2/lib/python2.7/site-packages/matplotlib/_cntr.so
+7f1c4c000000-7f1c4c021000 rw-p 00000000 00:00 0 
+7f1c4c021000-7f1c50000000 ---p 00000000 00:00 0 
+7f1c50000000-7f1c5003a000 rw-p 00000000 00:00 0 
+7f1c5003a000-7f1c54000000 ---p 00000000 00:00 0 
+7f1c54000000-7f1c54021000 rw-p 00000000 00:00 0 
+7f1c54021000-7f1c58000000 ---p 00000000 00:00 0 
+7f1c58000000-7f1c58021000 rw-p 00000000 00:00 0 
+7f1c58021000-7f1c5c000000 ---p 00000000 00:00 0 
+7f1c5c000000-7f1c5c044000 rw-p 00000000 00:00 0 
+7f1c5c044000-7f1c60000000 ---p 00000000 00:00 0 
+7f1c6001b000-7f1c6035b000 rw-p 00000000 00:00 0 
+7f1c6035b000-7f1c6035c000 ---p 00000000 00:00 0 
+7f1c6035c000-7f1c60d5c000 rw-p 00000000 00:00 0 
+7f1c60d5c000-7f1c60d5d000 ---p 00000000 00:00 0 
+7f1c60d5d000-7f1c6175d000 rw-p 00000000 00:00 0 
+7f1c6175d000-7f1c6175e000 ---p 00000000 00:00 0 
+7f1c6175e000-7f1c6215e000 rw-p 00000000 00:00 0 
+7f1c6215e000-7f1c6215f000 ---p 00000000 00:00 0 
+7f1c6215f000-7f1c62b5f000 rw-p 00000000 00:00 0 
+7f1c62b5f000-7f1c62b60000 ---p 00000000 00:00 0 
+7f1c62b60000-7f1c635a0000 rw-p 00000000 00:00 0 
+7f1c635a0000-7f1c635a1000 ---p 00000000 00:00 0 
+7f1c635a1000-7f1c63fa1000 rw-p 00000000 00:00 0 
+7f1c63fa1000-7f1c63fa2000 ---p 00000000 00:00 0 
+7f1c63fa2000-7f1c64a22000 rw-p 00000000 00:00 0 
+7f1c64a22000-7f1c64a32000 r-xp 00000000 08:12 33823736                   /home/llq/anaconda2/lib/python2.7/site-packages/pandas/_libs/testing.so
+7f1c64a32000-7f1c64c32000 ---p 00010000 08:12 33823736                   /home/llq/anaconda2/lib/python2.7/site-packages/pandas/_libs/testing.so
+7f1c64c32000-7f1c64c34000 rw-p 00010000 08:12 33823736                   /home/llq/anaconda2/lib/python2.7/site-packages/pandas/_libs/testing.so
+7f1c64c34000-7f1c64db4000 rw-p 00000000 00:00 0 
+7f1c64db4000-7f1c64db6000 r-xp 00000000 08:12 33948044                   /home/llq/anaconda2/lib/python2.7/site-packages/pandas/util/_move.so
+7f1c64db6000-7f1c64fb5000 ---p 00002000 08:12 33948044                   /home/llq/anaconda2/lib/python2.7/site-packages/pandas/util/_move.so
+7f1c64fb5000-7f1c64fb6000 rw-p 00001000 08:12 33948044                   /home/llq/anaconda2/lib/python2.7/site-packages/pandas/util/_move.so
+7f1c64fb6000-7f1c64fcb000 r-xp 00000000 08:12 33824012                   /home/llq/anaconda2/lib/python2.7/site-packages/pandas/io/msgpack/_unpacker.so
+7f1c64fcb000-7f1c651ca000 ---p 00015000 08:12 33824012                   /home/llq/anaconda2/lib/python2.7/site-packages/pandas/io/msgpack/_unpacker.so
+7f1c651ca000-7f1c651cc000 rw-p 00014000 08:12 33824012                   /home/llq/anaconda2/lib/python2.7/site-packages/pandas/io/msgpack/_unpacker.so
+7f1c651cc000-7f1c651cd000 rw-p 00000000 00:00 0 
+7f1c651cd000-7f1c651dc000 r-xp 00000000 08:12 33824011                   /home/llq/anaconda2/lib/python2.7/site-packages/pandas/io/msgpack/_packer.so
+7f1c651dc000-7f1c653db000 ---p 0000f000 08:12 33824011                   /home/llq/anaconda2/lib/python2.7/site-packages/pandas/io/msgpack/_packer.so
+7f1c653db000-7f1c653dd000 rw-p 0000e000 08:12 33824011                   /home/llq/anaconda2/lib/python2.7/site-packages/pandas/io/msgpack/_packer.so
+7f1c653dd000-7f1c6549d000 rw-p 00000000 00:00 0 
+7f1c6549d000-7f1c654b3000 r-xp 00000000 08:12 33823730                   /home/llq/anaconda2/lib/python2.7/site-packages/pandas/_libs/json.so
+7f1c654b3000-7f1c656b3000 ---p 00016000 08:12 33823730                   /home/llq/anaconda2/lib/python2.7/site-packages/pandas/_libs/json.so
+7f1c656b3000-7f1c656b4000 rw-p 00016000 08:12 33823730                   /home/llq/anaconda2/lib/python2.7/site-packages/pandas/_libs/json.so
+7f1c656b4000-7f1c6573a000 r-xp 00000000 08:12 33823732                   /home/llq/anaconda2/lib/python2.7/site-packages/pandas/_libs/parsers.so
+7f1c6573a000-7f1c65939000 ---p 00086000 08:12 33823732                   /home/llq/anaconda2/lib/python2.7/site-packages/pandas/_libs/parsers.so
+7f1c65939000-7f1c65940000 rw-p 00085000 08:12 33823732                   /home/llq/anaconda2/lib/python2.7/site-packages/pandas/_libs/parsers.so
+7f1c65940000-7f1c659c1000 rw-p 00000000 00:00 0 
+7f1c659c1000-7f1c659db000 r-xp 00000000 08:12 33823734                   /home/llq/anaconda2/lib/python2.7/site-packages/pandas/_libs/reshape.so
+7f1c659db000-7f1c65bda000 ---p 0001a000 08:12 33823734                   /home/llq/anaconda2/lib/python2.7/site-packages/pandas/_libs/reshape.so
+7f1c65bda000-7f1c65bdd000 rw-p 00019000 08:12 33823734                   /home/llq/anaconda2/lib/python2.7/site-packages/pandas/_libs/reshape.so
+7f1c65bdd000-7f1c65c5d000 rw-p 00000000 00:00 0 
+7f1c65c5d000-7f1c65cf5000 r-xp 00000000 08:12 33823724                   /home/llq/anaconda2/lib/python2.7/site-packages/pandas/_libs/groupby.so
+7f1c65cf5000-7f1c65ef5000 ---p 00098000 08:12 33823724                   /home/llq/anaconda2/lib/python2.7/site-packages/pandas/_libs/groupby.so
+7f1c65ef5000-7f1c65efb000 rw-p 00098000 08:12 33823724                   /home/llq/anaconda2/lib/python2.7/site-packages/pandas/_libs/groupby.so
+7f1c65efb000-7f1c65fbc000 rw-p 00000000 00:00 0 
+7f1c65fbc000-7f1c65fe9000 r-xp 00000000 08:12 47318222                   /home/llq/anaconda2/lib/python2.7/site-packages/matplotlib/_path.so
+7f1c65fe9000-7f1c661e8000 ---p 0002d000 08:12 47318222                   /home/llq/anaconda2/lib/python2.7/site-packages/matplotlib/_path.so
+7f1c661e8000-7f1c661ea000 rw-p 0002c000 08:12 47318222                   /home/llq/anaconda2/lib/python2.7/site-packages/matplotlib/_path.so
+7f1c661ea000-7f1c6652a000 rw-p 00000000 00:00 0 
+7f1c6652a000-7f1c6652d000 r-xp 00000000 08:12 33818478                   /home/llq/anaconda2/lib/python2.7/site-packages/_posixsubprocess.so
+7f1c6652d000-7f1c6672d000 ---p 00003000 08:12 33818478                   /home/llq/anaconda2/lib/python2.7/site-packages/_posixsubprocess.so
+7f1c6672d000-7f1c6672e000 rw-p 00003000 08:12 33818478                   /home/llq/anaconda2/lib/python2.7/site-packages/_posixsubprocess.so
+7f1c6672e000-7f1c667ae000 rw-p 00000000 00:00 0 
+7f1c667ae000-7f1c6684b000 r-xp 00000000 08:12 33823738                   /home/llq/anaconda2/lib/python2.7/site-packages/pandas/_libs/window.so
+7f1c6684b000-7f1c66a4b000 ---p 0009d000 08:12 33823738                   /home/llq/anaconda2/lib/python2.7/site-packages/pandas/_libs/window.so
+7f1c66a4b000-7f1c66a52000 rw-p 0009d000 08:12 33823738                   /home/llq/anaconda2/lib/python2.7/site-packages/pandas/_libs/window.so
+7f1c66a52000-7f1c66ad3000 rw-p 00000000 00:00 0 
+7f1c66ad3000-7f1c66ad8000 r-xp 00000000 08:12 40902331                   /home/llq/anaconda2/lib/python2.7/lib-dynload/mmap.so
+7f1c66ad8000-7f1c66cd8000 ---p 00005000 08:12 40902331                   /home/llq/anaconda2/lib/python2.7/lib-dynload/mmap.so
+7f1c66cd8000-7f1c66cd9000 rw-p 00005000 08:12 40902331                   /home/llq/anaconda2/lib/python2.7/lib-dynload/mmap.so
+7f1c66cd9000-7f1c66cdf000 r-xp 00000000 08:12 40902341                   /home/llq/anaconda2/lib/python2.7/lib-dynload/_csv.so
+7f1c66cdf000-7f1c66ede000 ---p 00006000 08:12 40902341                   /home/llq/anaconda2/lib/python2.7/lib-dynload/_csv.so
+7f1c66ede000-7f1c66ee1000 rw-p 00005000 08:12 40902341                   /home/llq/anaconda2/lib/python2.7/lib-dynload/_csv.so
+7f1c66ee1000-7f1c66f21000 rw-p 00000000 00:00 0 
+7f1c66f21000-7f1c67013000 r-xp 00000000 08:12 33823735                   /home/llq/anaconda2/lib/python2.7/site-packages/pandas/_libs/sparse.so
+7f1c67013000-7f1c67212000 ---p 000f2000 08:12 33823735                   /home/llq/anaconda2/lib/python2.7/site-packages/pandas/_libs/sparse.so
+7f1c67212000-7f1c67217000 rw-p 000f1000 08:12 33823735                   /home/llq/anaconda2/lib/python2.7/site-packages/pandas/_libs/sparse.so
+7f1c67217000-7f1c67317000 rw-p 00000000 00:00 0 
+7f1c67317000-7f1c67380000 r-xp 00000000 08:12 33823733                   /home/llq/anaconda2/lib/python2.7/site-packages/pandas/_libs/period.so
+7f1c67380000-7f1c6757f000 ---p 00069000 08:12 33823733                   /home/llq/anaconda2/lib/python2.7/site-packages/pandas/_libs/period.so
+7f1c6757f000-7f1c67586000 rw-p 00068000 08:12 33823733                   /home/llq/anaconda2/lib/python2.7/site-packages/pandas/_libs/period.so
+7f1c67586000-7f1c67687000 rw-p 00000000 00:00 0 
+7f1c67687000-7f1c67688000 ---p 00000000 00:00 0 
+7f1c67688000-7f1c68088000 rw-p 00000000 00:00 0 
+7f1c68088000-7f1c68089000 ---p 00000000 00:00 0 
+7f1c68089000-7f1c68a89000 rw-p 00000000 00:00 0 
+7f1c68a89000-7f1c68a8a000 ---p 00000000 00:00 0 
+7f1c68a8a000-7f1c6948a000 rw-p 00000000 00:00 0 
+7f1c6948a000-7f1c6948b000 ---p 00000000 00:00 0 
+7f1c6948b000-7f1c69ecb000 rw-p 00000000 00:00 0 
+7f1c69ecb000-7f1c69f0d000 r-xp 00000000 08:12 793799                     /home/llq/anaconda2/lib/python2.7/site-packages/numexpr/interpreter.so
+7f1c69f0d000-7f1c6a10d000 ---p 00042000 08:12 793799                     /home/llq/anaconda2/lib/python2.7/site-packages/numexpr/interpreter.so
+7f1c6a10d000-7f1c6a10e000 rw-p 00042000 08:12 793799                     /home/llq/anaconda2/lib/python2.7/site-packages/numexpr/interpreter.so
+7f1c6a10e000-7f1c6a14e000 rw-p 00000000 00:00 0 
+7f1c6a14e000-7f1c6a394000 r-xp 00000000 08:12 33823729                   /home/llq/anaconda2/lib/python2.7/site-packages/pandas/_libs/join.so
+7f1c6a394000-7f1c6a593000 ---p 00246000 08:12 33823729                   /home/llq/anaconda2/lib/python2.7/site-packages/pandas/_libs/join.so
+7f1c6a593000-7f1c6a59c000 rw-p 00245000 08:12 33823729                   /home/llq/anaconda2/lib/python2.7/site-packages/pandas/_libs/join.so
+7f1c6a59c000-7f1c6a59d000 rw-p 00000000 00:00 0 
+7f1c6a59d000-7f1c6a601000 r-xp 00000000 08:12 33823727                   /home/llq/anaconda2/lib/python2.7/site-packages/pandas/_libs/index.so
+7f1c6a601000-7f1c6a801000 ---p 00064000 08:12 33823727                   /home/llq/anaconda2/lib/python2.7/site-packages/pandas/_libs/index.so
+7f1c6a801000-7f1c6a806000 rw-p 00064000 08:12 33823727                   /home/llq/anaconda2/lib/python2.7/site-packages/pandas/_libs/index.so
+7f1c6a806000-7f1c6a8c7000 rw-p 00000000 00:00 0 
+7f1c6a8c7000-7f1c6a8db000 r-xp 00000000 08:12 33818513                   /home/llq/anaconda2/lib/python2.7/site-packages/bottleneck/move.so
+7f1c6a8db000-7f1c6aadb000 ---p 00014000 08:12 33818513                   /home/llq/anaconda2/lib/python2.7/site-packages/bottleneck/move.so
+7f1c6aadb000-7f1c6aadf000 rw-p 00014000 08:12 33818513                   /home/llq/anaconda2/lib/python2.7/site-packages/bottleneck/move.so
+7f1c6aadf000-7f1c6aae6000 r-xp 00000000 08:12 33818515                   /home/llq/anaconda2/lib/python2.7/site-packages/bottleneck/nonreduce_axis.so
+7f1c6aae6000-7f1c6ace6000 ---p 00007000 08:12 33818515                   /home/llq/anaconda2/lib/python2.7/site-packages/bottleneck/nonreduce_axis.so
+7f1c6ace6000-7f1c6ace8000 rw-p 00007000 08:12 33818515                   /home/llq/anaconda2/lib/python2.7/site-packages/bottleneck/nonreduce_axis.so
+7f1c6ace8000-7f1c6aceb000 r-xp 00000000 08:12 33818514                   /home/llq/anaconda2/lib/python2.7/site-packages/bottleneck/nonreduce.so
+7f1c6aceb000-7f1c6aeeb000 ---p 00003000 08:12 33818514                   /home/llq/anaconda2/lib/python2.7/site-packages/bottleneck/nonreduce.so
+7f1c6aeeb000-7f1c6aeec000 rw-p 00003000 08:12 33818514                   /home/llq/anaconda2/lib/python2.7/site-packages/bottleneck/nonreduce.so
+7f1c6aeec000-7f1c6af02000 r-xp 00000000 08:12 33818516                   /home/llq/anaconda2/lib/python2.7/site-packages/bottleneck/reduce.so
+7f1c6af02000-7f1c6b102000 ---p 00016000 08:12 33818516                   /home/llq/anaconda2/lib/python2.7/site-packages/bottleneck/reduce.so
+7f1c6b102000-7f1c6b106000 rw-p 00016000 08:12 33818516                   /home/llq/anaconda2/lib/python2.7/site-packages/bottleneck/reduce.so
+7f1c6b106000-7f1c6b117000 r-xp 00000000 08:12 33823725                   /home/llq/anaconda2/lib/python2.7/site-packages/pandas/_libs/hashing.so
+7f1c6b117000-7f1c6b316000 ---p 00011000 08:12 33823725                   /home/llq/anaconda2/lib/python2.7/site-packages/pandas/_libs/hashing.so
+7f1c6b316000-7f1c6b318000 rw-p 00010000 08:12 33823725                   /home/llq/anaconda2/lib/python2.7/site-packages/pandas/_libs/hashing.so
+7f1c6b318000-7f1c6b398000 rw-p 00000000 00:00 0 
+7f1c6b398000-7f1c6b4f9000 r-xp 00000000 08:12 33823723                   /home/llq/anaconda2/lib/python2.7/site-packages/pandas/_libs/algos.so
+7f1c6b4f9000-7f1c6b6f8000 ---p 00161000 08:12 33823723                   /home/llq/anaconda2/lib/python2.7/site-packages/pandas/_libs/algos.so
+7f1c6b6f8000-7f1c6b704000 rw-p 00160000 08:12 33823723                   /home/llq/anaconda2/lib/python2.7/site-packages/pandas/_libs/algos.so
+7f1c6b704000-7f1c6b886000 rw-p 00000000 00:00 0 
+7f1c6b886000-7f1c6b9f0000 r-xp 00000000 08:12 33823728                   /home/llq/anaconda2/lib/python2.7/site-packages/pandas/_libs/interval.so
+7f1c6b9f0000-7f1c6bbf0000 ---p 0016a000 08:12 33823728                   /home/llq/anaconda2/lib/python2.7/site-packages/pandas/_libs/interval.so
+7f1c6bbf0000-7f1c6bbfc000 rw-p 0016a000 08:12 33823728                   /home/llq/anaconda2/lib/python2.7/site-packages/pandas/_libs/interval.so
+7f1c6bbfc000-7f1c6bc3d000 rw-p 00000000 00:00 0 
+7f1c6bc3d000-7f1c6bd47000 r-xp 00000000 08:12 33823731                   /home/llq/anaconda2/lib/python2.7/site-packages/pandas/_libs/lib.so
+7f1c6bd47000-7f1c6bf47000 ---p 0010a000 08:12 33823731                   /home/llq/anaconda2/lib/python2.7/site-packages/pandas/_libs/lib.so
+7f1c6bf47000-7f1c6bf55000 rw-p 0010a000 08:12 33823731                   /home/llq/anaconda2/lib/python2.7/site-packages/pandas/_libs/lib.so
+7f1c6bf55000-7f1c6bf57000 rw-p 00000000 00:00 0 
+7f1c6bf57000-7f1c6bfe6000 r-xp 00000000 08:12 33823726                   /home/llq/anaconda2/lib/python2.7/site-packages/pandas/_libs/hashtable.so
+7f1c6bfe6000-7f1c6c1e6000 ---p 0008f000 08:12 33823726                   /home/llq/anaconda2/lib/python2.7/site-packages/pandas/_libs/hashtable.so
+7f1c6c1e6000-7f1c6c1ed000 rw-p 0008f000 08:12 33823726                   /home/llq/anaconda2/lib/python2.7/site-packages/pandas/_libs/hashtable.so
+7f1c6c1ed000-7f1c6c22e000 rw-p 00000000 00:00 0 
+7f1c6c22e000-7f1c6c3c4000 r-xp 00000000 08:12 33823737                   /home/llq/anaconda2/lib/python2.7/site-packages/pandas/_libs/tslib.so
+7f1c6c3c4000-7f1c6c5c3000 ---p 00196000 08:12 33823737                   /home/llq/anaconda2/lib/python2.7/site-packages/pandas/_libs/tslib.so
+7f1c6c5c3000-7f1c6c5d7000 rw-p 00195000 08:12 33823737                   /home/llq/anaconda2/lib/python2.7/site-packages/pandas/_libs/tslib.so
+7f1c6c5d7000-7f1c6c6da000 rw-p 00000000 00:00 0 
+7f1c6c6da000-7f1c6c796000 r-xp 00000000 08:12 33818419                   /home/llq/anaconda2/lib/python2.7/site-packages/numpy/random/mtrand.so
+7f1c6c796000-7f1c6c995000 ---p 000bc000 08:12 33818419                   /home/llq/anaconda2/lib/python2.7/site-packages/numpy/random/mtrand.so
+7f1c6c995000-7f1c6c9ba000 rw-p 000bb000 08:12 33818419                   /home/llq/anaconda2/lib/python2.7/site-packages/numpy/random/mtrand.so
+7f1c6c9ba000-7f1c6c9bb000 rw-p 00000000 00:00 0 
+7f1c6c9bb000-7f1c6c9c4000 r-xp 00000000 08:12 33818183                   /home/llq/anaconda2/lib/python2.7/site-packages/numpy/fft/fftpack_lite.so
+7f1c6c9c4000-7f1c6cbc3000 ---p 00009000 08:12 33818183                   /home/llq/anaconda2/lib/python2.7/site-packages/numpy/fft/fftpack_lite.so
+7f1c6cbc3000-7f1c6cbc4000 rw-p 00008000 08:12 33818183                   /home/llq/anaconda2/lib/python2.7/site-packages/numpy/fft/fftpack_lite.so
+7f1c6cbc4000-7f1c6cc04000 rw-p 00000000 00:00 0 
+7f1c6cc04000-7f1c6cc05000 r-xp 00000000 08:12 40902112                   /home/llq/anaconda2/lib/python2.7/lib-dynload/future_builtins.so
+7f1c6cc05000-7f1c6ce05000 ---p 00001000 08:12 40902112                   /home/llq/anaconda2/lib/python2.7/lib-dynload/future_builtins.so
+7f1c6ce05000-7f1c6ce06000 rw-p 00001000 08:12 40902112                   /home/llq/anaconda2/lib/python2.7/lib-dynload/future_builtins.so
+7f1c6ce06000-7f1c6ce46000 rw-p 00000000 00:00 0 
+7f1c6ce46000-7f1c6ce68000 r-xp 00000000 08:12 33818305                   /home/llq/anaconda2/lib/python2.7/site-packages/numpy/linalg/_umath_linalg.so
+7f1c6ce68000-7f1c6d067000 ---p 00022000 08:12 33818305                   /home/llq/anaconda2/lib/python2.7/site-packages/numpy/linalg/_umath_linalg.so
+7f1c6d067000-7f1c6d069000 rw-p 00021000 08:12 33818305                   /home/llq/anaconda2/lib/python2.7/site-packages/numpy/linalg/_umath_linalg.so
+7f1c6d069000-7f1c6d06c000 r-xp 00000000 08:12 33818308                   /home/llq/anaconda2/lib/python2.7/site-packages/numpy/linalg/lapack_lite.so
+7f1c6d06c000-7f1c6d26c000 ---p 00003000 08:12 33818308                   /home/llq/anaconda2/lib/python2.7/site-packages/numpy/linalg/lapack_lite.so
+7f1c6d26c000-7f1c6d26d000 rw-p 00003000 08:12 33818308                   /home/llq/anaconda2/lib/python2.7/site-packages/numpy/linalg/lapack_lite.so
+7f1c6d26d000-7f1c6d32d000 rw-p 00000000 00:00 0 
+7f1c6d32d000-7f1c6d409000 r-xp 00000000 08:12 33817902                   /home/llq/anaconda2/lib/python2.7/site-packages/numpy/core/umath.so
+7f1c6d409000-7f1c6d609000 ---p 000dc000 08:12 33817902                   /home/llq/anaconda2/lib/python2.7/site-packages/numpy/core/umath.so
+7f1c6d609000-7f1c6d60f000 rw-p 000dc000 08:12 33817902                   /home/llq/anaconda2/lib/python2.7/site-packages/numpy/core/umath.so
+7f1c6d60f000-7f1c6d611000 rw-p 00000000 00:00 0 
+7f1c6d611000-7f1c6d77a000 r-xp 00000000 08:12 29496535                   /home/llq/anaconda2/lib/libiomp5.so
+7f1c6d77a000-7f1c6d97a000 ---p 00169000 08:12 29496535                   /home/llq/anaconda2/lib/libiomp5.so
+7f1c6d97a000-7f1c6d985000 rw-p 00169000 08:12 29496535                   /home/llq/anaconda2/lib/libiomp5.so
+7f1c6d985000-7f1c6d9b4000 rw-p 00000000 00:00 0 
+7f1c6d9b4000-7f1c6d9bb000 rw-p 001c1000 08:12 29496535                   /home/llq/anaconda2/lib/libiomp5.so
+7f1c6d9bb000-7f1c6f26e000 r-xp 00000000 08:12 29496543                   /home/llq/anaconda2/lib/libmkl_core.so
+7f1c6f26e000-7f1c6f46d000 ---p 018b3000 08:12 29496543                   /home/llq/anaconda2/lib/libmkl_core.so
+7f1c6f46d000-7f1c6f475000 r--p 018b2000 08:12 29496543                   /home/llq/anaconda2/lib/libmkl_core.so
+7f1c6f475000-7f1c6f496000 rw-p 018ba000 08:12 29496543                   /home/llq/anaconda2/lib/libmkl_core.so
+7f1c6f496000-7f1c6f4ed000 rw-p 00000000 00:00 0 
+7f1c6f4ed000-7f1c70bc9000 r-xp 00000000 08:12 29496557                   /home/llq/anaconda2/lib/libmkl_intel_thread.so
+7f1c70bc9000-7f1c70dc8000 ---p 016dc000 08:12 29496557                   /home/llq/anaconda2/lib/libmkl_intel_thread.so
+7f1c70dc8000-7f1c70dcb000 r--p 016db000 08:12 29496557                   /home/llq/anaconda2/lib/libmkl_intel_thread.so
+7f1c70dcb000-7f1c70fab000 rw-p 016de000 08:12 29496557                   /home/llq/anaconda2/lib/libmkl_intel_thread.so
+7f1c70fab000-7f1c70fb2000 rw-p 00000000 00:00 0 
+7f1c70fb2000-7f1c717d1000 r-xp 00000000 08:12 29496556                   /home/llq/anaconda2/lib/libmkl_intel_lp64.so
+7f1c717d1000-7f1c719d1000 ---p 0081f000 08:12 29496556                   /home/llq/anaconda2/lib/libmkl_intel_lp64.so
+7f1c719d1000-7f1c719d2000 r--p 0081f000 08:12 29496556                   /home/llq/anaconda2/lib/libmkl_intel_lp64.so
+7f1c719d2000-7f1c719e3000 rw-p 00820000 08:12 29496556                   /home/llq/anaconda2/lib/libmkl_intel_lp64.so
+7f1c719e3000-7f1c719e9000 rw-p 00000000 00:00 0 
+7f1c719e9000-7f1c71b95000 r-xp 00000000 08:12 33817811                   /home/llq/anaconda2/lib/python2.7/site-packages/numpy/core/multiarray.so
+7f1c71b95000-7f1c71d95000 ---p 001ac000 08:12 33817811                   /home/llq/anaconda2/lib/python2.7/site-packages/numpy/core/multiarray.so
+7f1c71d95000-7f1c71da4000 rw-p 001ac000 08:12 33817811                   /home/llq/anaconda2/lib/python2.7/site-packages/numpy/core/multiarray.so
+7f1c71da4000-7f1c71db7000 rw-p 00000000 00:00 0 
+7f1c71db7000-7f1c71dbd000 r-xp 00000000 08:12 40902344                   /home/llq/anaconda2/lib/python2.7/lib-dynload/_multiprocessing.so
+7f1c71dbd000-7f1c71fbd000 ---p 00006000 08:12 40902344                   /home/llq/anaconda2/lib/python2.7/lib-dynload/_multiprocessing.so
+7f1c71fbd000-7f1c71fbe000 rw-p 00006000 08:12 40902344                   /home/llq/anaconda2/lib/python2.7/lib-dynload/_multiprocessing.so
+7f1c71fbe000-7f1c722bf000 rw-p 00000000 00:00 0 
+7f1c722bf000-7f1c722d1000 r-xp 00000000 08:12 27661233                   /home/llq/anaconda2/lib/python2.7/lib-dynload/_curses.so
+7f1c722d1000-7f1c724d1000 ---p 00012000 08:12 27661233                   /home/llq/anaconda2/lib/python2.7/lib-dynload/_curses.so
+7f1c724d1000-7f1c724d3000 rw-p 00012000 08:12 27661233                   /home/llq/anaconda2/lib/python2.7/lib-dynload/_curses.so
+7f1c724d3000-7f1c724d4000 r-xp 00000000 08:12 28709555                   /home/llq/anaconda2/lib/python2.7/site-packages/tornado/speedups.so
+7f1c724d4000-7f1c726d3000 ---p 00001000 08:12 28709555                   /home/llq/anaconda2/lib/python2.7/site-packages/tornado/speedups.so
+7f1c726d3000-7f1c726d4000 rw-p 00000000 08:12 28709555                   /home/llq/anaconda2/lib/python2.7/site-packages/tornado/speedups.so
+7f1c726d4000-7f1c72754000 rw-p 00000000 00:00 0 
+7f1c72754000-7f1c72758000 r-xp 00000000 08:12 3145917                    /lib/x86_64-linux-gnu/libuuid.so.1.3.0
+7f1c72758000-7f1c72957000 ---p 00004000 08:12 3145917                    /lib/x86_64-linux-gnu/libuuid.so.1.3.0
+7f1c72957000-7f1c72958000 r--p 00003000 08:12 3145917                    /lib/x86_64-linux-gnu/libuuid.so.1.3.0
+7f1c72958000-7f1c72959000 rw-p 00004000 08:12 3145917                    /lib/x86_64-linux-gnu/libuuid.so.1.3.0
+7f1c72959000-7f1c72999000 rw-p 00000000 00:00 0 
+7f1c72999000-7f1c729a1000 r-xp 00000000 08:12 27921194                   /home/llq/anaconda2/lib/python2.7/site-packages/zmq/backend/cython/_device.so
+7f1c729a1000-7f1c72ba1000 ---p 00008000 08:12 27921194                   /home/llq/anaconda2/lib/python2.7/site-packages/zmq/backend/cython/_device.so
+7f1c72ba1000-7f1c72ba2000 rw-p 00008000 08:12 27921194                   /home/llq/anaconda2/lib/python2.7/site-packages/zmq/backend/cython/_device.so
+7f1c72ba2000-7f1c72ba5000 r-xp 00000000 08:12 27921196                   /home/llq/anaconda2/lib/python2.7/site-packages/zmq/backend/cython/_version.so
+7f1c72ba5000-7f1c72da4000 ---p 00003000 08:12 27921196                   /home/llq/anaconda2/lib/python2.7/site-packages/zmq/backend/cython/_version.so
+7f1c72da4000-7f1c72da5000 rw-p 00002000 08:12 27921196                   /home/llq/anaconda2/lib/python2.7/site-packages/zmq/backend/cython/_version.so
+7f1c72da5000-7f1c72db0000 r-xp 00000000 08:12 27921195                   /home/llq/anaconda2/lib/python2.7/site-packages/zmq/backend/cython/_poll.so
+7f1c72db0000-7f1c72faf000 ---p 0000b000 08:12 27921195                   /home/llq/anaconda2/lib/python2.7/site-packages/zmq/backend/cython/_poll.so
+7f1c72faf000-7f1c72fb1000 rw-p 0000a000 08:12 27921195                   /home/llq/anaconda2/lib/python2.7/site-packages/zmq/backend/cython/_poll.so
+7f1c72fb1000-7f1c72fb8000 r-xp 00000000 08:12 27921210                   /home/llq/anaconda2/lib/python2.7/site-packages/zmq/backend/cython/utils.so
+7f1c72fb8000-7f1c731b7000 ---p 00007000 08:12 27921210                   /home/llq/anaconda2/lib/python2.7/site-packages/zmq/backend/cython/utils.so
+7f1c731b7000-7f1c731b8000 rw-p 00006000 08:12 27921210                   /home/llq/anaconda2/lib/python2.7/site-packages/zmq/backend/cython/utils.so
+7f1c731b8000-7f1c731b9000 rw-p 00000000 00:00 0 
+7f1c731b9000-7f1c731d4000 r-xp 00000000 08:12 27921208                   /home/llq/anaconda2/lib/python2.7/site-packages/zmq/backend/cython/socket.so
+7f1c731d4000-7f1c733d3000 ---p 0001b000 08:12 27921208                   /home/llq/anaconda2/lib/python2.7/site-packages/zmq/backend/cython/socket.so
+7f1c733d3000-7f1c733d7000 rw-p 0001a000 08:12 27921208                   /home/llq/anaconda2/lib/python2.7/site-packages/zmq/backend/cython/socket.so
+7f1c733d7000-7f1c733e1000 r-xp 00000000 08:12 27921202                   /home/llq/anaconda2/lib/python2.7/site-packages/zmq/backend/cython/context.so
+7f1c733e1000-7f1c735e0000 ---p 0000a000 08:12 27921202                   /home/llq/anaconda2/lib/python2.7/site-packages/zmq/backend/cython/context.so
+7f1c735e0000-7f1c735e2000 rw-p 00009000 08:12 27921202                   /home/llq/anaconda2/lib/python2.7/site-packages/zmq/backend/cython/context.so
+7f1c735e2000-7f1c735f1000 r-xp 00000000 08:12 27921206                   /home/llq/anaconda2/lib/python2.7/site-packages/zmq/backend/cython/message.so
+7f1c735f1000-7f1c737f0000 ---p 0000f000 08:12 27921206                   /home/llq/anaconda2/lib/python2.7/site-packages/zmq/backend/cython/message.so
+7f1c737f0000-7f1c737f2000 rw-p 0000e000 08:12 27921206                   /home/llq/anaconda2/lib/python2.7/site-packages/zmq/backend/cython/message.so
+7f1c737f2000-7f1c737f6000 r-xp 00000000 08:12 27921203                   /home/llq/anaconda2/lib/python2.7/site-packages/zmq/backend/cython/error.so
+7f1c737f6000-7f1c739f5000 ---p 00004000 08:12 27921203                   /home/llq/anaconda2/lib/python2.7/site-packages/zmq/backend/cython/error.so
+7f1c739f5000-7f1c739f6000 rw-p 00003000 08:12 27921203                   /home/llq/anaconda2/lib/python2.7/site-packages/zmq/backend/cython/error.so
+7f1c739f6000-7f1c73a07000 r-xp 00000000 08:12 33817639                   /home/llq/anaconda2/lib/libgcc_s.so.1
+7f1c73a07000-7f1c73c06000 ---p 00011000 08:12 33817639                   /home/llq/anaconda2/lib/libgcc_s.so.1
+7f1c73c06000-7f1c73c07000 r--p 00010000 08:12 33817639                   /home/llq/anaconda2/lib/libgcc_s.so.1
+7f1c73c07000-7f1c73c08000 rw-p 00011000 08:12 33817639                   /home/llq/anaconda2/lib/libgcc_s.so.1
+7f1c73c08000-7f1c73d32000 r-xp 00000000 08:12 47584902                   /home/llq/anaconda2/lib/libstdc++.so.6.0.24
+7f1c73d32000-7f1c73f31000 ---p 0012a000 08:12 47584902                   /home/llq/anaconda2/lib/libstdc++.so.6.0.24
+7f1c73f31000-7f1c73f3b000 r--p 00129000 08:12 47584902                   /home/llq/anaconda2/lib/libstdc++.so.6.0.24
+7f1c73f3b000-7f1c73f3f000 rw-p 00133000 08:12 47584902                   /home/llq/anaconda2/lib/libstdc++.so.6.0.24
+7f1c73f3f000-7f1c73f42000 rw-p 00000000 00:00 0 
+7f1c73f42000-7f1c73fa8000 r-xp 00000000 08:12 27528346                   /home/llq/anaconda2/lib/libsodium.so.18.1.0
+7f1c73fa8000-7f1c741a7000 ---p 00066000 08:12 27528346                   /home/llq/anaconda2/lib/libsodium.so.18.1.0
+7f1c741a7000-7f1c741a8000 r--p 00065000 08:12 27528346                   /home/llq/anaconda2/lib/libsodium.so.18.1.0
+7f1c741a8000-7f1c741a9000 rw-p 00066000 08:12 27528346                   /home/llq/anaconda2/lib/libsodium.so.18.1.0
+7f1c741a9000-7f1c741b0000 r-xp 00000000 08:12 3145933                    /lib/x86_64-linux-gnu/librt-2.23.so
+7f1c741b0000-7f1c743af000 ---p 00007000 08:12 3145933                    /lib/x86_64-linux-gnu/librt-2.23.so
+7f1c743af000-7f1c743b0000 r--p 00006000 08:12 3145933                    /lib/x86_64-linux-gnu/librt-2.23.so
+7f1c743b0000-7f1c743b1000 rw-p 00007000 08:12 3145933                    /lib/x86_64-linux-gnu/librt-2.23.so
+7f1c743b1000-7f1c7440d000 r-xp 00000000 08:12 28710291                   /home/llq/anaconda2/lib/libzmq.so.5.0.0
+7f1c7440d000-7f1c7460c000 ---p 0005c000 08:12 28710291                   /home/llq/anaconda2/lib/libzmq.so.5.0.0
+7f1c7460c000-7f1c74611000 rw-p 0005b000 08:12 28710291                   /home/llq/anaconda2/lib/libzmq.so.5.0.0
+7f1c74611000-7f1c7461f000 r-xp 00000000 08:12 27921200                   /home/llq/anaconda2/lib/python2.7/site-packages/zmq/backend/cython/constants.so
+7f1c7461f000-7f1c7481e000 ---p 0000e000 08:12 27921200                   /home/llq/anaconda2/lib/python2.7/site-packages/zmq/backend/cython/constants.so
+7f1c7481e000-7f1c74821000 rw-p 0000d000 08:12 27921200                   /home/llq/anaconda2/lib/python2.7/site-packages/zmq/backend/cython/constants.so
+7f1c74821000-7f1c748e1000 rw-p 00000000 00:00 0 
+7f1c748e1000-7f1c748e5000 r-xp 00000000 08:12 40902307                   /home/llq/anaconda2/lib/python2.7/lib-dynload/_lsprof.so
+7f1c748e5000-7f1c74ae4000 ---p 00004000 08:12 40902307                   /home/llq/anaconda2/lib/python2.7/lib-dynload/_lsprof.so
+7f1c74ae4000-7f1c74ae6000 rw-p 00003000 08:12 40902307                   /home/llq/anaconda2/lib/python2.7/lib-dynload/_lsprof.so
+7f1c74ae6000-7f1c74ba6000 rw-p 00000000 00:00 0 
+7f1c74ba6000-7f1c74c3c000 r-xp 00000000 08:12 40902393                   /home/llq/anaconda2/lib/python2.7/lib-dynload/unicodedata.so
+7f1c74c3c000-7f1c74e3b000 ---p 00096000 08:12 40902393                   /home/llq/anaconda2/lib/python2.7/lib-dynload/unicodedata.so
+7f1c74e3b000-7f1c74e4f000 rw-p 00095000 08:12 40902393                   /home/llq/anaconda2/lib/python2.7/lib-dynload/unicodedata.so
+7f1c74e4f000-7f1c74e8f000 rw-p 00000000 00:00 0 
+7f1c74e8f000-7f1c74e99000 r-xp 00000000 08:12 40902362                   /home/llq/anaconda2/lib/python2.7/lib-dynload/array.so
+7f1c74e99000-7f1c75098000 ---p 0000a000 08:12 40902362                   /home/llq/anaconda2/lib/python2.7/lib-dynload/array.so
+7f1c75098000-7f1c7509b000 rw-p 00009000 08:12 40902362                   /home/llq/anaconda2/lib/python2.7/lib-dynload/array.so
+7f1c7509b000-7f1c7521b000 rw-p 00000000 00:00 0 
+7f1c7521b000-7f1c7521d000 r-xp 00000000 08:12 40902192                   /home/llq/anaconda2/lib/python2.7/lib-dynload/_bisect.so
+7f1c7521d000-7f1c7541d000 ---p 00002000 08:12 40902192                   /home/llq/anaconda2/lib/python2.7/lib-dynload/_bisect.so
+7f1c7541d000-7f1c7541e000 rw-p 00002000 08:12 40902192                   /home/llq/anaconda2/lib/python2.7/lib-dynload/_bisect.so
+7f1c7541e000-7f1c754de000 rw-p 00000000 00:00 0 
+7f1c754de000-7f1c75512000 r-xp 00000000 08:12 27274105                   /home/llq/anaconda2/lib/libtinfo.so.5.9
+7f1c75512000-7f1c75711000 ---p 00034000 08:12 27274105                   /home/llq/anaconda2/lib/libtinfo.so.5.9
+7f1c75711000-7f1c75716000 rw-p 00033000 08:12 27274105                   /home/llq/anaconda2/lib/libtinfo.so.5.9
+7f1c75716000-7f1c7573a000 r-xp 00000000 08:12 40897920                   /home/llq/anaconda2/lib/libncurses.so.5.9
+7f1c7573a000-7f1c7593a000 ---p 00024000 08:12 40897920                   /home/llq/anaconda2/lib/libncurses.so.5.9
+7f1c7593a000-7f1c7593b000 rw-p 00024000 08:12 40897920                   /home/llq/anaconda2/lib/libncurses.so.5.9
+7f1c7593b000-7f1c75a37000 r-xp 00000000 08:12 40900388                   /home/llq/anaconda2/lib/libsqlite3.so.0.8.6
+7f1c75a37000-7f1c75c36000 ---p 000fc000 08:12 40900388                   /home/llq/anaconda2/lib/libsqlite3.so.0.8.6
+7f1c75c36000-7f1c75c3b000 rw-p 000fb000 08:12 40900388                   /home/llq/anaconda2/lib/libsqlite3.so.0.8.6
+7f1c75c3b000-7f1c75c4c000 r-xp 00000000 08:12 27661236                   /home/llq/anaconda2/lib/python2.7/lib-dynload/_sqlite3.so
+7f1c75c4c000-7f1c75e4c000 ---p 00011000 08:12 27661236                   /home/llq/anaconda2/lib/python2.7/lib-dynload/_sqlite3.so
+7f1c75e4c000-7f1c75e4f000 rw-p 00011000 08:12 27661236                   /home/llq/anaconda2/lib/python2.7/lib-dynload/_sqlite3.so
+7f1c75e4f000-7f1c75e8f000 rw-p 00000000 00:00 0 
+7f1c75e8f000-7f1c75ea5000 r-xp 00000000 08:12 40902385                   /home/llq/anaconda2/lib/python2.7/lib-dynload/cPickle.so
+7f1c75ea5000-7f1c760a4000 ---p 00016000 08:12 40902385                   /home/llq/anaconda2/lib/python2.7/lib-dynload/cPickle.so
+7f1c760a4000-7f1c760a6000 rw-p 00015000 08:12 40902385                   /home/llq/anaconda2/lib/python2.7/lib-dynload/cPickle.so
+7f1c760a6000-7f1c762e6000 rw-p 00000000 00:00 0 
+7f1c76320000-7f1c764a0000 rw-p 00000000 00:00 0 
+7f1c764a0000-7f1c764b5000 r-xp 00000000 08:12 40902388                   /home/llq/anaconda2/lib/python2.7/lib-dynload/datetime.so
+7f1c764b5000-7f1c766b5000 ---p 00015000 08:12 40902388                   /home/llq/anaconda2/lib/python2.7/lib-dynload/datetime.so
+7f1c766b5000-7f1c766b9000 rw-p 00015000 08:12 40902388                   /home/llq/anaconda2/lib/python2.7/lib-dynload/datetime.so
+7f1c766b9000-7f1c766f9000 rw-p 00000000 00:00 0 
+7f1c766f9000-7f1c7670d000 r-xp 00000000 08:12 27661237                   /home/llq/anaconda2/lib/python2.7/lib-dynload/_ssl.so
+7f1c7670d000-7f1c7690d000 ---p 00014000 08:12 27661237                   /home/llq/anaconda2/lib/python2.7/lib-dynload/_ssl.so
+7f1c7690d000-7f1c76911000 rw-p 00014000 08:12 27661237                   /home/llq/anaconda2/lib/python2.7/lib-dynload/_ssl.so
+7f1c76911000-7f1c76922000 r-xp 00000000 08:12 40902380                   /home/llq/anaconda2/lib/python2.7/lib-dynload/_socket.so
+7f1c76922000-7f1c76b21000 ---p 00011000 08:12 40902380                   /home/llq/anaconda2/lib/python2.7/lib-dynload/_socket.so
+7f1c76b21000-7f1c76b26000 rw-p 00010000 08:12 40902380                   /home/llq/anaconda2/lib/python2.7/lib-dynload/_socket.so
+7f1c76b26000-7f1c76ba6000 rw-p 00000000 00:00 0 
+7f1c76ba6000-7f1c76bc8000 r-xp 00000000 08:12 40902391                   /home/llq/anaconda2/lib/python2.7/lib-dynload/_ctypes.so
+7f1c76bc8000-7f1c76dc7000 ---p 00022000 08:12 40902391                   /home/llq/anaconda2/lib/python2.7/lib-dynload/_ctypes.so
+7f1c76dc7000-7f1c76dcc000 rw-p 00021000 08:12 40902391                   /home/llq/anaconda2/lib/python2.7/lib-dynload/_ctypes.so
+7f1c76dcc000-7f1c76e0c000 rw-p 00000000 00:00 0 
+7f1c76e0c000-7f1c76e0e000 r-xp 00000000 08:12 40902181                   /home/llq/anaconda2/lib/python2.7/lib-dynload/resource.so
+7f1c76e0e000-7f1c7700e000 ---p 00002000 08:12 40902181                   /home/llq/anaconda2/lib/python2.7/lib-dynload/resource.so
+7f1c7700e000-7f1c7700f000 rw-p 00002000 08:12 40902181                   /home/llq/anaconda2/lib/python2.7/lib-dynload/resource.so
+7f1c7700f000-7f1c77013000 r-xp 00000000 08:12 40902261                   /home/llq/anaconda2/lib/python2.7/lib-dynload/termios.so
+7f1c77013000-7f1c77213000 ---p 00004000 08:12 40902261                   /home/llq/anaconda2/lib/python2.7/lib-dynload/termios.so
+7f1c77213000-7f1c77215000 rw-p 00004000 08:12 40902261                   /home/llq/anaconda2/lib/python2.7/lib-dynload/termios.so
+7f1c77215000-7f1c77255000 rw-p 00000000 00:00 0 
+7f1c77255000-7f1c7725a000 r-xp 00000000 08:12 40902321                   /home/llq/anaconda2/lib/python2.7/lib-dynload/select.so
+7f1c7725a000-7f1c77459000 ---p 00005000 08:12 40902321                   /home/llq/anaconda2/lib/python2.7/lib-dynload/select.so
+7f1c77459000-7f1c7745b000 rw-p 00004000 08:12 40902321                   /home/llq/anaconda2/lib/python2.7/lib-dynload/select.so
+7f1c7745b000-7f1c7745e000 r-xp 00000000 08:12 40902281                   /home/llq/anaconda2/lib/python2.7/lib-dynload/fcntl.so
+7f1c7745e000-7f1c7765d000 ---p 00003000 08:12 40902281                   /home/llq/anaconda2/lib/python2.7/lib-dynload/fcntl.so
+7f1c7765d000-7f1c7765f000 rw-p 00002000 08:12 40902281                   /home/llq/anaconda2/lib/python2.7/lib-dynload/fcntl.so
+7f1c7765f000-7f1c7771f000 rw-p 00000000 00:00 0 
+7f1c7771f000-7f1c77722000 r-xp 00000000 08:12 40902244                   /home/llq/anaconda2/lib/python2.7/lib-dynload/_random.so
+7f1c77722000-7f1c77921000 ---p 00003000 08:12 40902244                   /home/llq/anaconda2/lib/python2.7/lib-dynload/_random.so
+7f1c77921000-7f1c77922000 rw-p 00002000 08:12 40902244                   /home/llq/anaconda2/lib/python2.7/lib-dynload/_random.so
+7f1c77922000-7f1c77b49000 r-xp 00000000 08:12 790370                     /home/llq/anaconda2/lib/libcrypto.so.1.0.0
+7f1c77b49000-7f1c77d49000 ---p 00227000 08:12 790370                     /home/llq/anaconda2/lib/libcrypto.so.1.0.0
+7f1c77d49000-7f1c77d70000 rw-p 00227000 08:12 790370                     /home/llq/anaconda2/lib/libcrypto.so.1.0.0
+7f1c77d70000-7f1c77d73000 rw-p 00000000 00:00 0 
+7f1c77d73000-7f1c77de2000 r-xp 00000000 08:12 790371                     /home/llq/anaconda2/lib/libssl.so.1.0.0
+7f1c77de2000-7f1c77fe1000 ---p 0006f000 08:12 790371                     /home/llq/anaconda2/lib/libssl.so.1.0.0
+7f1c77fe1000-7f1c77fec000 rw-p 0006e000 08:12 790371                     /home/llq/anaconda2/lib/libssl.so.1.0.0
+7f1c77fec000-7f1c77ff1000 r-xp 00000000 08:12 27661235                   /home/llq/anaconda2/lib/python2.7/lib-dynload/_hashlib.so
+7f1c77ff1000-7f1c781f1000 ---p 00005000 08:12 27661235                   /home/llq/anaconda2/lib/python2.7/lib-dynload/_hashlib.so
+7f1c781f1000-7f1c781f2000 rw-p 00005000 08:12 27661235                   /home/llq/anaconda2/lib/python2.7/lib-dynload/_hashlib.so
+7f1c781f2000-7f1c781f7000 r-xp 00000000 08:12 27661239                   /home/llq/anaconda2/lib/python2.7/lib-dynload/binascii.so
+7f1c781f7000-7f1c783f6000 ---p 00005000 08:12 27661239                   /home/llq/anaconda2/lib/python2.7/lib-dynload/binascii.so
+7f1c783f6000-7f1c783f7000 rw-p 00004000 08:12 27661239                   /home/llq/anaconda2/lib/python2.7/lib-dynload/binascii.so
+7f1c783f7000-7f1c78403000 r-xp 00000000 08:12 40902376                   /home/llq/anaconda2/lib/python2.7/lib-dynload/math.so
+7f1c78403000-7f1c78602000 ---p 0000c000 08:12 40902376                   /home/llq/anaconda2/lib/python2.7/lib-dynload/math.so
+7f1c78602000-7f1c78604000 rw-p 0000b000 08:12 40902376                   /home/llq/anaconda2/lib/python2.7/lib-dynload/math.so
+7f1c78604000-7f1c78644000 rw-p 00000000 00:00 0 
+7f1c78644000-7f1c7864d000 r-xp 00000000 08:12 40902361                   /home/llq/anaconda2/lib/python2.7/lib-dynload/_json.so
+7f1c7864d000-7f1c7884d000 ---p 00009000 08:12 40902361                   /home/llq/anaconda2/lib/python2.7/lib-dynload/_json.so
+7f1c7884d000-7f1c7884e000 rw-p 00009000 08:12 40902361                   /home/llq/anaconda2/lib/python2.7/lib-dynload/_json.so
+7f1c7884e000-7f1c78857000 r-xp 00000000 08:12 40902363                   /home/llq/anaconda2/lib/python2.7/lib-dynload/_struct.so
+7f1c78857000-7f1c78a57000 ---p 00009000 08:12 40902363                   /home/llq/anaconda2/lib/python2.7/lib-dynload/_struct.so
+7f1c78a57000-7f1c78a59000 rw-p 00009000 08:12 40902363                   /home/llq/anaconda2/lib/python2.7/lib-dynload/_struct.so
+7f1c78a59000-7f1c78b19000 rw-p 00000000 00:00 0 
+7f1c78b19000-7f1c78b1c000 r-xp 00000000 08:12 40902232                   /home/llq/anaconda2/lib/python2.7/lib-dynload/_functools.so
+7f1c78b1c000-7f1c78d1b000 ---p 00003000 08:12 40902232                   /home/llq/anaconda2/lib/python2.7/lib-dynload/_functools.so
+7f1c78d1b000-7f1c78d1c000 rw-p 00002000 08:12 40902232                   /home/llq/anaconda2/lib/python2.7/lib-dynload/_functools.so
+7f1c78d1c000-7f1c78d5c000 rw-p 00000000 00:00 0 
+7f1c78d5d000-7f1c78e1d000 rw-p 00000000 00:00 0 
+7f1c78e1d000-7f1c78e1f000 r-xp 00000000 08:12 40902175                   /home/llq/anaconda2/lib/python2.7/lib-dynload/grp.so
+7f1c78e1f000-7f1c7901f000 ---p 00002000 08:12 40902175                   /home/llq/anaconda2/lib/python2.7/lib-dynload/grp.so
+7f1c7901f000-7f1c79020000 rw-p 00002000 08:12 40902175                   /home/llq/anaconda2/lib/python2.7/lib-dynload/grp.so
+7f1c79020000-7f1c79036000 r-xp 00000000 08:12 27661240                   /home/llq/anaconda2/lib/python2.7/lib-dynload/bz2.so
+7f1c79036000-7f1c79236000 ---p 00016000 08:12 27661240                   /home/llq/anaconda2/lib/python2.7/lib-dynload/bz2.so
+7f1c79236000-7f1c79239000 rw-p 00016000 08:12 27661240                   /home/llq/anaconda2/lib/python2.7/lib-dynload/bz2.so
+7f1c79239000-7f1c79255000 r-xp 00000000 08:12 40898755                   /home/llq/anaconda2/lib/libz.so.1.2.11
+7f1c79255000-7f1c79455000 ---p 0001c000 08:12 40898755                   /home/llq/anaconda2/lib/libz.so.1.2.11
+7f1c79455000-7f1c79456000 rw-p 0001c000 08:12 40898755                   /home/llq/anaconda2/lib/libz.so.1.2.11
+7f1c79456000-7f1c7945b000 r-xp 00000000 08:12 27661242                   /home/llq/anaconda2/lib/python2.7/lib-dynload/zlib.so
+7f1c7945b000-7f1c7965a000 ---p 00005000 08:12 27661242                   /home/llq/anaconda2/lib/python2.7/lib-dynload/zlib.so
+7f1c7965a000-7f1c7965c000 rw-p 00004000 08:12 27661242                   /home/llq/anaconda2/lib/python2.7/lib-dynload/zlib.so
+7f1c7965c000-7f1c7969c000 rw-p 00000000 00:00 0 
+7f1c7969c000-7f1c796a0000 r-xp 00000000 08:12 40902299                   /home/llq/anaconda2/lib/python2.7/lib-dynload/time.so
+7f1c796a0000-7f1c798a0000 ---p 00004000 08:12 40902299                   /home/llq/anaconda2/lib/python2.7/lib-dynload/time.so
+7f1c798a0000-7f1c798a2000 rw-p 00004000 08:12 40902299                   /home/llq/anaconda2/lib/python2.7/lib-dynload/time.so
+7f1c798a2000-7f1c798a5000 r-xp 00000000 08:12 40902286                   /home/llq/anaconda2/lib/python2.7/lib-dynload/_heapq.so
+7f1c798a5000-7f1c79aa5000 ---p 00003000 08:12 40902286                   /home/llq/anaconda2/lib/python2.7/lib-dynload/_heapq.so
+7f1c79aa5000-7f1c79aa7000 rw-p 00003000 08:12 40902286                   /home/llq/anaconda2/lib/python2.7/lib-dynload/_heapq.so
+7f1c79aa7000-7f1c79aaf000 r-xp 00000000 08:12 40902346                   /home/llq/anaconda2/lib/python2.7/lib-dynload/operator.so
+7f1c79aaf000-7f1c79caf000 ---p 00008000 08:12 40902346                   /home/llq/anaconda2/lib/python2.7/lib-dynload/operator.so
+7f1c79caf000-7f1c79cb1000 rw-p 00008000 08:12 40902346                   /home/llq/anaconda2/lib/python2.7/lib-dynload/operator.so
+7f1c79cb1000-7f1c79cb9000 r-xp 00000000 08:12 40902355                   /home/llq/anaconda2/lib/python2.7/lib-dynload/_collections.so
+7f1c79cb9000-7f1c79eb8000 ---p 00008000 08:12 40902355                   /home/llq/anaconda2/lib/python2.7/lib-dynload/_collections.so
+7f1c79eb8000-7f1c79eba000 rw-p 00007000 08:12 40902355                   /home/llq/anaconda2/lib/python2.7/lib-dynload/_collections.so
+7f1c79eba000-7f1c79efa000 rw-p 00000000 00:00 0 
+7f1c79efa000-7f1c79efe000 r-xp 00000000 08:12 40902308                   /home/llq/anaconda2/lib/python2.7/lib-dynload/cStringIO.so
+7f1c79efe000-7f1c7a0fd000 ---p 00004000 08:12 40902308                   /home/llq/anaconda2/lib/python2.7/lib-dynload/cStringIO.so
+7f1c7a0fd000-7f1c7a0ff000 rw-p 00003000 08:12 40902308                   /home/llq/anaconda2/lib/python2.7/lib-dynload/cStringIO.so
+7f1c7a0ff000-7f1c7a10a000 r-xp 00000000 08:12 40902371                   /home/llq/anaconda2/lib/python2.7/lib-dynload/itertools.so
+7f1c7a10a000-7f1c7a309000 ---p 0000b000 08:12 40902371                   /home/llq/anaconda2/lib/python2.7/lib-dynload/itertools.so
+7f1c7a309000-7f1c7a30e000 rw-p 0000a000 08:12 40902371                   /home/llq/anaconda2/lib/python2.7/lib-dynload/itertools.so
+7f1c7a30e000-7f1c7a34e000 rw-p 00000000 00:00 0 
+7f1c7a34e000-7f1c7a36d000 r-xp 00000000 08:12 40902390                   /home/llq/anaconda2/lib/python2.7/lib-dynload/_io.so
+7f1c7a36d000-7f1c7a56c000 ---p 0001f000 08:12 40902390                   /home/llq/anaconda2/lib/python2.7/lib-dynload/_io.so
+7f1c7a56c000-7f1c7a576000 rw-p 0001e000 08:12 40902390                   /home/llq/anaconda2/lib/python2.7/lib-dynload/_io.so
+7f1c7a576000-7f1c7a57c000 r-xp 00000000 08:12 40902330                   /home/llq/anaconda2/lib/python2.7/lib-dynload/strop.so
+7f1c7a57c000-7f1c7a77b000 ---p 00006000 08:12 40902330                   /home/llq/anaconda2/lib/python2.7/lib-dynload/strop.so
+7f1c7a77b000-7f1c7a77d000 rw-p 00005000 08:12 40902330                   /home/llq/anaconda2/lib/python2.7/lib-dynload/strop.so
+7f1c7a77d000-7f1c7ac08000 r--p 00000000 08:12 20189514                   /usr/lib/locale/locale-archive
+7f1c7ac08000-7f1c7ac0c000 r-xp 00000000 08:12 40902304                   /home/llq/anaconda2/lib/python2.7/lib-dynload/_locale.so
+7f1c7ac0c000-7f1c7ae0c000 ---p 00004000 08:12 40902304                   /home/llq/anaconda2/lib/python2.7/lib-dynload/_locale.so
+7f1c7ae0c000-7f1c7ae0d000 rw-p 00004000 08:12 40902304                   /home/llq/anaconda2/lib/python2.7/lib-dynload/_locale.so
+7f1c7ae0d000-7f1c7afcd000 r-xp 00000000 08:12 3145910                    /lib/x86_64-linux-gnu/libc-2.23.so
+7f1c7afcd000-7f1c7b1cd000 ---p 001c0000 08:12 3145910                    /lib/x86_64-linux-gnu/libc-2.23.so
+7f1c7b1cd000-7f1c7b1d1000 r--p 001c0000 08:12 3145910                    /lib/x86_64-linux-gnu/libc-2.23.so
+7f1c7b1d1000-7f1c7b1d3000 rw-p 001c4000 08:12 3145910                    /lib/x86_64-linux-gnu/libc-2.23.so
+7f1c7b1d3000-7f1c7b1d7000 rw-p 00000000 00:00 0 
+7f1c7b1d7000-7f1c7b2df000 r-xp 00000000 08:12 3145902                    /lib/x86_64-linux-gnu/libm-2.23.so
+7f1c7b2df000-7f1c7b4de000 ---p 00108000 08:12 3145902                    /lib/x86_64-linux-gnu/libm-2.23.so
+7f1c7b4de000-7f1c7b4df000 r--p 00107000 08:12 3145902                    /lib/x86_64-linux-gnu/libm-2.23.so
+7f1c7b4df000-7f1c7b4e0000 rw-p 00108000 08:12 3145902                    /lib/x86_64-linux-gnu/libm-2.23.so
+7f1c7b4e0000-7f1c7b4e2000 r-xp 00000000 08:12 3145922                    /lib/x86_64-linux-gnu/libutil-2.23.so
+7f1c7b4e2000-7f1c7b6e1000 ---p 00002000 08:12 3145922                    /lib/x86_64-linux-gnu/libutil-2.23.so
+7f1c7b6e1000-7f1c7b6e2000 r--p 00001000 08:12 3145922                    /lib/x86_64-linux-gnu/libutil-2.23.so
+7f1c7b6e2000-7f1c7b6e3000 rw-p 00002000 08:12 3145922                    /lib/x86_64-linux-gnu/libutil-2.23.so
+7f1c7b6e3000-7f1c7b6e6000 r-xp 00000000 08:12 3145915                    /lib/x86_64-linux-gnu/libdl-2.23.so
+7f1c7b6e6000-7f1c7b8e5000 ---p 00003000 08:12 3145915                    /lib/x86_64-linux-gnu/libdl-2.23.so
+7f1c7b8e5000-7f1c7b8e6000 r--p 00002000 08:12 3145915                    /lib/x86_64-linux-gnu/libdl-2.23.so
+7f1c7b8e6000-7f1c7b8e7000 rw-p 00003000 08:12 3145915                    /lib/x86_64-linux-gnu/libdl-2.23.so
+7f1c7b8e7000-7f1c7b8ff000 r-xp 00000000 08:12 3145909                    /lib/x86_64-linux-gnu/libpthread-2.23.so
+7f1c7b8ff000-7f1c7bafe000 ---p 00018000 08:12 3145909                    /lib/x86_64-linux-gnu/libpthread-2.23.so
+7f1c7bafe000-7f1c7baff000 r--p 00017000 08:12 3145909                    /lib/x86_64-linux-gnu/libpthread-2.23.so
+7f1c7baff000-7f1c7bb00000 rw-p 00018000 08:12 3145909                    /lib/x86_64-linux-gnu/libpthread-2.23.so
+7f1c7bb00000-7f1c7bb04000 rw-p 00000000 00:00 0 
+7f1c7bb04000-7f1c7bcc8000 r-xp 00000000 08:12 27274334                   /home/llq/anaconda2/lib/libpython2.7.so.1.0
+7f1c7bcc8000-7f1c7bec8000 ---p 001c4000 08:12 27274334                   /home/llq/anaconda2/lib/libpython2.7.so.1.0
+7f1c7bec8000-7f1c7bf07000 rw-p 001c4000 08:12 27274334                   /home/llq/anaconda2/lib/libpython2.7.so.1.0
+7f1c7bf07000-7f1c7bf29000 rw-p 00000000 00:00 0 
+7f1c7bf29000-7f1c7bf4f000 r-xp 00000000 08:12 3145907                    /lib/x86_64-linux-gnu/ld-2.23.so
+7f1c7bf66000-7f1c7bf77000 r--s 00104000 08:12 33039084                   /home/llq/anaconda2/lib/python2.7/site-packages/pyhanlp/static/hanlp-1.6.8.jar
+7f1c7bf77000-7f1c7c037000 rw-p 00000000 00:00 0 
+7f1c7c040000-7f1c7c12c000 rw-p 00000000 00:00 0 
+7f1c7c13b000-7f1c7c143000 rw-s 00000000 08:12 786557                     /tmp/hsperfdata_llq/19835
+7f1c7c143000-7f1c7c144000 rw-p 00000000 00:00 0 
+7f1c7c144000-7f1c7c145000 r--p 00000000 00:00 0 
+7f1c7c145000-7f1c7c14c000 r--s 00000000 08:12 20453979                   /usr/lib/x86_64-linux-gnu/gconv/gconv-modules.cache
+7f1c7c14c000-7f1c7c14d000 rwxp 00000000 00:00 0 
+7f1c7c14d000-7f1c7c14e000 rw-p 00000000 00:00 0 
+7f1c7c14e000-7f1c7c14f000 r--p 00025000 08:12 3145907                    /lib/x86_64-linux-gnu/ld-2.23.so
+7f1c7c14f000-7f1c7c150000 rw-p 00026000 08:12 3145907                    /lib/x86_64-linux-gnu/ld-2.23.so
+7f1c7c150000-7f1c7c151000 rw-p 00000000 00:00 0 
+7ffe9f15d000-7ffe9f160000 ---p 00000000 00:00 0 
+7ffe9f161000-7ffe9f25d000 rw-p 00000000 00:00 0                          [stack]
+7ffe9f268000-7ffe9f26a000 r--p 00000000 00:00 0                          [vvar]
+7ffe9f26a000-7ffe9f26c000 r-xp 00000000 00:00 0                          [vdso]
+ffffffffff600000-ffffffffff601000 r-xp 00000000 00:00 0                  [vsyscall]
+
+VM Arguments:
+jvm_args: -Xms1g -Xmx2g 
+java_command: <unknown>
+java_class_path (initial): /home/llq/anaconda2/lib/python2.7/site-packages/pyhanlp/static/hanlp-1.6.8.jar:/home/llq/anaconda2/lib/python2.7/site-packages/pyhanlp/static
+Launcher Type: generic
+
+Environment Variables:
+JAVA_HOME=/home/llq/software/jdk/jdk1.8.0_121
+CLASSPATH=/home/llq/software/jdk/jdk1.8.0_121/lib/
+PATH=/home/llq/anaconda2/bin:/home/llq/bin:/home/llq/.local/bin:/usr/local/cuda-8.0/bin:/home/llq/software/jdk/jdk1.8.0_121/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+LD_LIBRARY_PATH=/usr/local/cuda-8.0/lib64:
+SHELL=/bin/bash
+DISPLAY=:0
+
+Signal Handlers:
+SIGSEGV: [libjvm.so+0xac78c0], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGBUS: [libjvm.so+0xac78c0], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGFPE: [libjvm.so+0x920ac0], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGPIPE: [libjvm.so+0x920ac0], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGXFSZ: [libjvm.so+0x920ac0], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGILL: [libjvm.so+0x920ac0], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGUSR1: SIG_DFL, sa_mask[0]=00000000000000000000000000000000, sa_flags=none
+SIGUSR2: [libjvm.so+0x922300], sa_mask[0]=00000000000000000000000000000000, sa_flags=SA_RESTART|SA_SIGINFO
+SIGHUP: [libjvm.so+0x923700], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGINT: [libpython2.7.so.1.0+0x155980], sa_mask[0]=00000000000000000000000000000000, sa_flags=none
+SIGTERM: [libjvm.so+0x923700], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGQUIT: [libjvm.so+0x923700], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+
+
+---------------  S Y S T E M  ---------------
+
+OS:DISTRIB_ID=Ubuntu
+DISTRIB_RELEASE=16.04
+DISTRIB_CODENAME=xenial
+DISTRIB_DESCRIPTION="Ubuntu 16.04.4 LTS"
+
+uname:Linux 4.4.0-75-generic #96-Ubuntu SMP Thu Apr 20 09:56:33 UTC 2017 x86_64
+libc:glibc 2.23 NPTL 2.23 
+rlimit: STACK 10240k, CORE 0k, NPROC 2047, NOFILE 65536, AS infinity
+load average:1.44 1.41 1.23
+
+/proc/meminfo:
+MemTotal:       24560652 kB
+MemFree:         3844836 kB
+MemAvailable:    6804064 kB
+Buffers:           95556 kB
+Cached:          3206096 kB
+SwapCached:       146356 kB
+Active:         13005560 kB
+Inactive:        2749824 kB
+Active(anon):   11012988 kB
+Inactive(anon):  1559692 kB
+Active(file):    1992572 kB
+Inactive(file):  1190132 kB
+Unevictable:         144 kB
+Mlocked:             144 kB
+SwapTotal:      25035772 kB
+SwapFree:       20680908 kB
+Dirty:               244 kB
+Writeback:             0 kB
+AnonPages:      12392960 kB
+Mapped:          4991952 kB
+Shmem:            118804 kB
+Slab:             229692 kB
+SReclaimable:     123124 kB
+SUnreclaim:       106568 kB
+KernelStack:       17280 kB
+PageTables:       124732 kB
+NFS_Unstable:          0 kB
+Bounce:                0 kB
+WritebackTmp:          0 kB
+CommitLimit:    37316096 kB
+Committed_AS:   32830756 kB
+VmallocTotal:   34359738367 kB
+VmallocUsed:           0 kB
+VmallocChunk:          0 kB
+HardwareCorrupted:     0 kB
+AnonHugePages:   7903232 kB
+CmaTotal:              0 kB
+CmaFree:               0 kB
+HugePages_Total:       0
+HugePages_Free:        0
+HugePages_Rsvd:        0
+HugePages_Surp:        0
+Hugepagesize:       2048 kB
+DirectMap4k:     1568296 kB
+DirectMap2M:    23468032 kB
+DirectMap1G:           0 kB
+
+
+CPU:total 4 (4 cores per cpu, 1 threads per core) family 6 model 60 stepping 3, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, avx, avx2, aes, clmul, erms, lzcnt, tsc, tscinvbit, bmi1, bmi2
+
+/proc/cpuinfo:
+processor	: 0
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 60
+model name	: Intel(R) Core(TM) i5-4430 CPU @ 3.00GHz
+stepping	: 3
+microcode	: 0x1c
+cpu MHz		: 3048.164
+cache size	: 6144 KB
+physical id	: 0
+siblings	: 4
+core id		: 0
+cpu cores	: 4
+apicid		: 0
+initial apicid	: 0
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc aperfmperf eagerfpu pni pclmulqdq dtes64 monitor ds_cpl vmx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid xsaveopt dtherm ida arat pln pts
+bugs		:
+bogomips	: 5999.53
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 39 bits physical, 48 bits virtual
+power management:
+
+processor	: 1
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 60
+model name	: Intel(R) Core(TM) i5-4430 CPU @ 3.00GHz
+stepping	: 3
+microcode	: 0x1c
+cpu MHz		: 3175.664
+cache size	: 6144 KB
+physical id	: 0
+siblings	: 4
+core id		: 1
+cpu cores	: 4
+apicid		: 2
+initial apicid	: 2
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc aperfmperf eagerfpu pni pclmulqdq dtes64 monitor ds_cpl vmx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid xsaveopt dtherm ida arat pln pts
+bugs		:
+bogomips	: 5999.53
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 39 bits physical, 48 bits virtual
+power management:
+
+processor	: 2
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 60
+model name	: Intel(R) Core(TM) i5-4430 CPU @ 3.00GHz
+stepping	: 3
+microcode	: 0x1c
+cpu MHz		: 3156.796
+cache size	: 6144 KB
+physical id	: 0
+siblings	: 4
+core id		: 2
+cpu cores	: 4
+apicid		: 4
+initial apicid	: 4
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc aperfmperf eagerfpu pni pclmulqdq dtes64 monitor ds_cpl vmx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid xsaveopt dtherm ida arat pln pts
+bugs		:
+bogomips	: 5999.53
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 39 bits physical, 48 bits virtual
+power management:
+
+processor	: 3
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 60
+model name	: Intel(R) Core(TM) i5-4430 CPU @ 3.00GHz
+stepping	: 3
+microcode	: 0x1c
+cpu MHz		: 3061.523
+cache size	: 6144 KB
+physical id	: 0
+siblings	: 4
+core id		: 3
+cpu cores	: 4
+apicid		: 6
+initial apicid	: 6
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc aperfmperf eagerfpu pni pclmulqdq dtes64 monitor ds_cpl vmx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid xsaveopt dtherm ida arat pln pts
+bugs		:
+bogomips	: 5999.53
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 39 bits physical, 48 bits virtual
+power management:
+
+
+
+Memory: 4k page, physical 24560652k(3844836k free), swap 25035772k(20680908k free)
+
+vm_info: Java HotSpot(TM) 64-Bit Server VM (25.121-b13) for linux-amd64 JRE (1.8.0_121-b13), built on Dec 12 2016 16:36:53 by "java_re" with gcc 4.3.0 20080428 (Red Hat 4.3.0-8)
+
+time: Tue Oct 30 15:20:28 2018
+elapsed time: 197 seconds (0d 0h 3m 17s)
+
